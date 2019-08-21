@@ -126,6 +126,12 @@ background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
 background: linear-gradient(to right, #0ABFBC, #FC354C);
 }
 
+.tilesWrap li:nth-child(5):before {
+	background: #34eb71;
+background: -webkit-linear-gradient(to right, #b74ced, #34eb71);
+background: linear-gradient(to right, #b74ced, #34eb71);
+}
+
 
 #pages {
 	text-align: center;
