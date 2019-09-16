@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body>
+    <div>
+        <h1 id="pbm">Predicted Body Weight</h1>
+    </div>
+    <!-- <div>
+        <input type="radio" name="gender" value="male" id="male" onClick="changecol('m');onClick=calculateM()">
+        <inline id="malCol">Male</inline>
+        <input type="radio" name="gender" value="female" id="female" onClick="changecol('f');onClick=calculateF()">
+        <inline id="femCol"> Female</inline><br>
+    </div> -->
+    <div>
+        <h3 id="pthight">Patient's hight in cm</h3>
+
+        <input type=number id="number">
+        <p id="calcpbm"></p>
+        <p id="weight"></p>
+    </div>
+
+    <div>
+        <label>
+            <input type="radio" name="gender" value="male" id="male" onClick="changecol('m');onClick=calculateM()"><br>
+            <div id="malCol">Male</div>
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female" id="female" onClick="changecol('f');onClick=calculateF()">
+            <div id="femCol"> Female</div><br>
+        </label>
+    </div>
+
+    <!--  <button type="button" id="button" onclick="calculate();onClick = this.style.visibility='hidden'">Calculate</button> -->
+
+
+    <script src="myscript.js">
+
+    </script>
+</body>
+
+</html>

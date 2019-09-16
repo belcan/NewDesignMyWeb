@@ -1,0 +1,97 @@
+body {
+    background-color: #e3e6dc;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+#pbm {
+    margin: auto;
+    padding-top: 30px;
+    text-align: center;
+}
+
+#male {
+    margin-left: 181px;
+    margin-top: 54px;
+    display: none;
+}
+
+#female {
+    margin-left: 181px;
+    margin-top: 54px;
+    display: none;
+
+}
+
+#malCol {
+    color: darkblue;
+    font-size: 1.9rem;
+    margin-bottom: 55px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#malCol:hover {
+    font-weight: bold;
+    text-shadow: 1px 2px 3px #000000;
+}
+
+#femCol {
+    color: darkred;
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 33px;
+    cursor: pointer;
+}
+
+#femCol:hover {
+    font-weight: bold;
+    text-shadow: 1px 2px 3px #000000;
+}
+
+
+#pthight {
+    margin: 60px 50px 25px 0px;
+    text-align: center;
+}
+
+#number {
+    width: 50px;
+    margin: 0 auto;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 23px;
+    border-radius: 7px;
+
+
+}
+
+#button {
+    margin: 0 auto;
+    display: block;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    outline: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: 7px;
+
+}
+
+#button:hover {
+    background: rgb(0, 0, 0);
+}
+
+#calcpbm {
+    margin: 0 0 10px 0px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#weight {
+
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px 50px 75px 50px;
+    text-align: center;
+}
