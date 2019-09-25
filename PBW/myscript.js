@@ -10,10 +10,10 @@ function calculateM() {
         document.getElementById("calcpbm").innerHTML = "PBW for Male Patient";
         document.getElementById("weight").innerHTML = c.toFixed(0) + ' kg';
     } else if (a < 1 && a >= 0) {
-        document.getElementById("calcpbm").innerHTML = "Please enter hight in cm";
+        document.getElementById("calcpbm").innerHTML = "Please enter height in cm";
         document.getElementById("weight").innerHTML = "";
     } else if (a >= 1 && a < 152) {
-        document.getElementById("calcpbm").innerHTML = "C'mon, enter real hight!";
+        document.getElementById("calcpbm").innerHTML = "C'mon, enter real height!";
         document.getElementById("weight").innerHTML = "";
     }
 }
@@ -30,10 +30,10 @@ function calculateF() {
         document.getElementById("calcpbm").innerHTML = "PBW for Female Patient";
         document.getElementById("weight").innerHTML = d.toFixed(0) + ' kg';
     } else if (a < 1 && a >= 0) {
-        document.getElementById("calcpbm").innerHTML = "Please enter hight in cm";
+        document.getElementById("calcpbm").innerHTML = "Please enter height in cm";
         document.getElementById("weight").innerHTML = "";
     } else if (a >= 1 && a < 152) {
-        document.getElementById("calcpbm").innerHTML = "C'mon, enter real hight!";
+        document.getElementById("calcpbm").innerHTML = "C'mon, enter real height!";
         document.getElementById("weight").innerHTML = "";
     }
 }
