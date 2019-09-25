@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
+  <title>Optimal PEEP</title>
+  <link rel="stylesheet" href="peepStyle.css">
+  
+</head>
+<body> 
+
+<div class="container">
+
+    <div class="name">
+        <h1>Optimal PEEP</h1>
+          </div>
+<form id="myform">
+  Pplato:
+  <input type="number" id="pplato" placeholder="cmH2O"><br><br>
+      Pes on Insp:
+  <input type="number" id="pesoninsp" placeholder="mmHg" ><br><br>
+      PEEP:
+  <input type="number" id="peep" placeholder="cmH2O"><br><br>
+      Pes on Exp:
+  <input type="number" id="pesonexp" placeholder="mmHg"><br><br>
+    </form>
+    <div class="results">
+      
+  Ptp Insp: <span id="ptpinsp"></span><br><br>      
+    Ptp Exp:<span id="ptpexp"></span>&nbsp&nbsp<div style="font-size:13px !important;"> (should be 0 to +10 cmH2O)</div><br><br>
+    Delta P:<span id="deltap"></span>&nbsp&nbsp<div style="font-size:13px !important;"> (should be &lt 20 cmH2O)</div><br><br>
+    </div>
+  <button type="button" id ="calcbutton" onclick="calculate()" >Calculate</button> <br><br>
+  <button type="button" id="resetbutton" onclick="resetform()">Reset</button>
+</div>
+
+  <script src = "peepScript.js" >
+  </script>
+  </div>
+ 
+  </body>
+
+</html>
