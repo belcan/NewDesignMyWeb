@@ -29,6 +29,9 @@ body {
     margin-bottom: 55px;
     text-align: center;
     cursor: pointer;
+    transition-property: text-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
 }
 
 #malCol:hover {
@@ -42,6 +45,9 @@ body {
     text-align: center;
     margin-bottom: 33px;
     cursor: pointer;
+    transition-property: text-shadow;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
 }
 
 #femCol:hover {
