@@ -80,6 +80,10 @@ button{
       border-style: groove;
       cursor: pointer;
       padding: 0.5em;
+      transition-property: background-color;
+      transition-property: color;
+      transition-duration: 0.5s;
+      transition-timing-function: linear;
 }
     #calcbutton:hover{
         background-color: rgb(177, 58, 14);
