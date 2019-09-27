@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
 .container {
     /*background-color: #5DBCD2;*/
     display: flex;
@@ -8,12 +13,13 @@
 .title {
     color: #2C0E42;
     font-size: 150%;
-    background-color: #03c6fc;
+    background-color: #58452bd5;
     text-shadow: 4px 4px 2px #88dbf2;
     border: 1px solid #fff;
     width: auto;
     display: flex;
     justify-content: center;
+    padding: 1em;
 
 }
 
@@ -22,6 +28,7 @@ h2 {
     text-shadow: 2px 2px 4px #000000;
     display: flex;
     justify-content: center;
+    padding: 0.5em;
 }
 
 ul {
@@ -51,6 +58,7 @@ a:hover {
     position: relative;
     overflow: hidden;
     min-height: 100vh;
+    padding: 3rem;
 
 }
 

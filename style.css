@@ -255,7 +255,7 @@ div.foo {
 }
 
 h1 {
-    font-family: Butcherman;
+    /* font-family: Butcherman; */
     font-size: 280%;
     text-align: center;
     text-shadow: 2px 2px 4px #DEF3F3;
