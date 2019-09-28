@@ -27,8 +27,7 @@
 }
 
 h2 {
-    font-size: 8vh;
-    /* text-shadow: 2px 2px 4px #000000; */
+    font-size: 8vh;   
     display: flex;
     justify-content: center;
     padding: 0.5em;
@@ -49,6 +48,7 @@ a {
 
 a:hover {
     text-decoration: underline;
+    color: #daec9e;
 }
 
 .visplaces {
