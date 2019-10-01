@@ -64,8 +64,8 @@ body {
 }
 
 #number {
-    width: 60px !important;
-   max-width: none !important;
+    width: 8vmax;
+   
     margin: 0 auto;
     display: block;
     font-size: 4vh;    
