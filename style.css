@@ -324,7 +324,11 @@ button {
     -webkit-transform: scale(1.2);
     transform: scale(1.6);
 }
-
+.hidden{
+text-decoration: none;
+color: rgb(24, 47, 77);
+cursor: auto;
+}
 
 @media only screen and (orientation: portrait) {
     html {
