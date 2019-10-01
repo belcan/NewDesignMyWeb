@@ -71,7 +71,7 @@ body {
     border-radius: 7px;
 
 }
-@media only screen and (max-width:320px){
+@media only screen and (max-width:220px){
 #number {
     width: 88px;   
     margin: 0 auto;
