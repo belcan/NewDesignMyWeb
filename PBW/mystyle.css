@@ -66,16 +66,14 @@ body {
     width: 50px;
     margin: 0 auto;
     display: block;
-    font-size: 20px;
+    font-size: 4vh;
     margin-bottom: 23px;
     border-radius: 7px;
-
 
 }
 @media only screen and (max-width:600px){
 #number {
-    width: 8vmax;
-   
+    width: 8vmax;   
     margin: 0 auto;
     display: block;
     font-size: 4vh;    
