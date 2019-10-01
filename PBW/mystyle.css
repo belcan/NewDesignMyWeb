@@ -62,7 +62,17 @@ body {
      margin-top: 60px; 
     text-align: center;
 }
+#number {
+    width: 50px;
+    margin: 0 auto;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 23px;
+    border-radius: 7px;
 
+
+}
+@media only screen and (max-width:600px){
 #number {
     width: 8vmax;
    
@@ -71,7 +81,7 @@ body {
     font-size: 4vh;    
     margin-bottom: 23px;
     border-radius: 7px;
-
+}
 
 }
 
