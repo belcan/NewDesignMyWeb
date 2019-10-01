@@ -73,7 +73,7 @@ body {
 }
 @media only screen and (max-width:600px){
 #number {
-    width: 8vmax;   
+    width: 12vmax;   
     margin: 0 auto;
     display: block;
     font-size: 4vh;    
