@@ -64,10 +64,10 @@ body {
 }
 
 #number {
-    width: 10vw;
+    width: 55px;
     margin: 0 auto;
     display: block;
-    font-size: 4vh;
+    font-size: 4vh;    
     margin-bottom: 23px;
     border-radius: 7px;
 
@@ -92,13 +92,13 @@ body {
 
 #calcpbm {
     margin: 0 0 10px 0px;
-    font-size: 30px;
+    font-size: 5vh;
     text-align: center;
 }
 
 #weight {
 
-    font-size: 30px;
+    font-size: 6vh;
     font-weight: bold;
     margin: 0px 50px 45px 50px;
     text-align: center;
