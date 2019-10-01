@@ -27,7 +27,7 @@ body {
 #malCol {
     color: darkblue;
     font-size: 6vh;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
     text-align: center;
     cursor: pointer;
     transition-property: text-shadow;
@@ -59,15 +59,15 @@ body {
 
 #pthight {
     font-size: 3.5vh;
-    margin: 60px 50px 25px 0px;
+     margin-top: 60px; 
     text-align: center;
 }
 
 #number {
-    width: 50px;
+    width: 55px;
     margin: 0 auto;
     display: block;
-    font-size: 20px;
+    font-size: 4vh;
     margin-bottom: 23px;
     border-radius: 7px;
 
@@ -100,6 +100,6 @@ body {
 
     font-size: 30px;
     font-weight: bold;
-    margin: 0px 50px 75px 50px;
+    margin: 0px 50px 45px 50px;
     text-align: center;
 }
