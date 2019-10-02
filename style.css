@@ -1,6 +1,14 @@
 body {
     background: #262a2b;
 }
+/*=====
+removes blue outline on links. 
+Should also add :focus to links' :hover 
+for keyboard navigating
+=======*/
+:focus{
+    outline: none;
+}
 
 .tilesWrap {
     padding: 0;
