@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+}
+.allCalc{
+    display:flex;
+    align-items: center;
+    
+}
+
