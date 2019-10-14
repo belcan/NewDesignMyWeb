@@ -5,22 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styleCalc.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
     <title>Respiratory Calculations</title>
 </head>
 <body>
-    <div class="allCalc">
-        <div class="statCompl">Static Compliance
-                Cstat = VT(effective)/PPLAT - PEEP
+    <div class="container">
+        <div class="statCompl">
+            <h1>Static Compliance</h1>
+               <p> $$Cstat = {Vt(effective) \over Pplat - PEEP}$$</p>
                Normal Values 60 - 90 mL/cm H2O    
         </div>
         <div class="dynamCompl">
-            Dynamic Compliance
-            Cdyn = VT(effective)/PIP - PEEP
-            Normal Values
-
+           <h1> Dynamic Compliance</h1>
+            <p>$$Cdyn = {Vt(effective) \over PIP - PEEP}$$</p>            
         </div>
 
     </div>
-    <script src="scriptCalc.js"></script>
+    <script src="scriptCalc.js">
+        
+    </script>
+
 </body>
 </html>
