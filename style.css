@@ -42,6 +42,15 @@ for keyboard navigating
     right: 10px;
     transition: all 0.3s ease-in-out;
 }
+/* added .dontobscured to prevent h4 interfering with h3*/
+.dontobscure{
+    opacity: 0;
+}
+
+.tilesWrap li:hover .dontobscure {
+    top: 0px;
+    opacity: 1;
+}
 
 .tilesWrap li h3 {
     font-size: 20px;
@@ -146,8 +155,8 @@ for keyboard navigating
 
 .tilesWrap li:nth-child(4):before {
     background: #FC354C;
-    background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
-    background: linear-gradient(to right, #0ABFBC, #FC354C);
+    background: -webkit-linear-gradient(to right, #0ABFBC, #7d248f);
+    background: linear-gradient(to right, #0ABFBC, #7d248f);
 }
 
 .tilesWrap li:nth-child(5):before {
@@ -160,6 +169,12 @@ for keyboard navigating
     background: #34a4eb;
     background: -webkit-linear-gradient(to right, #f0f26d, #34a4eb);
     background: linear-gradient(to right, #f0f26d, #34a4eb);
+}
+
+.tilesWrap li:nth-child(7):before {
+    background: #34eb71;
+    background: -webkit-linear-gradient(to right, #f26ddc, #34eb71);
+    background: linear-gradient(to right, #f26ddc, #34eb71);
 }
 
 #pages {

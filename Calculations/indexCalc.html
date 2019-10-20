@@ -13,15 +13,137 @@
 </head>
 <body>
     <div class="container">
-        <div class="statCompl">
-            <h1>Static Compliance</h1>
-               <p> $$Cstat = {Vt(effective) \over Pplat - PEEP}$$</p>
-               Normal Values 60 - 90 mL/cm H2O    
-        </div>
-        <div class="dynamCompl">
-           <h1> Dynamic Compliance</h1>
-            <p>$$Cdyn = {Vt(effective) \over PIP - PEEP}$$</p>            
-        </div>
+       <div class="title"> <h1>RESPIRATORY CALCULATIONS</h1></div>
+                  <div class="statCompl parameter">
+                        <div> <h1>Static Compliance</h1></div>
+                        <div> <p> $$Cstat = {Vt \over Pplat - PEEP}$$</p></div>
+                        <div> <span class="normVal"> Normal Values</span> $$50 - 90 {mL\over cm H2O}$$ </div>
+                        <div> <span class="normVal"> ARDS</span> $$35 - 45 {mL\over cm H2O}$$ </div>                          
+                  </div>
+                  <div class="dynamCompl parameter">
+                        <div> <h1> Dynamic Compliance</h1></div>
+                        <div><p>$$Cdyn = {Vt \over PIP - PEEP}$$</p></div>  
+                        <div><span class="normVal"> <!--Normal Values--></span> $$$$ </div>        
+                  </div>
+                  <div class="airwayRes parameter">
+                         <div><h1>Airway Resistance</h1></div>
+                         <div> <p> $$Raw = {PIP-Pplat \over Flow}$$</p></div>
+                         <div> <span class="normVal"> Normal Values</span> $$0.6-2.4  {cmH2O\over L/sec}$$ </div>  
+                  </div>
+
+                  <div class="deadspace parameter">
+                         <div> <h1>Physiologic Deadspace</h1></div>
+                         <div><p> $$ {Vd \over Vt} = {PaCO2-PeCO2 \over PaCO2}$$</p></div> 
+                         <div> <span class= "normVal"> Normal Value</span> $$less \ than \ 0.4 $$</div>                       
+                  </div>
+
+                  <div class="Ratio parameter">
+                          <div><h1>P/F Ratio</h1></div>
+                          <div> <p> $$PaO2 \over FiO2$$</p></div>
+                          <div> <span class="normVal"> Acute lung injury</span> $$ &lt 250\ mild \over
+                              &lt 100\ severe$$ </div>  
+                  </div>
+
+                    <div class="rsbi parameter">
+                           <div> <h1>Rapid Shallow <br>Breathing Index</h1></div>
+                           <div><p>$$RSBI = {f \over Vt(in\ Liters)}$$</p></div> 
+                           <div> <span class= "normVal"> Normal Value</span> $$ &lt 105$$</div>     
+                      </div>
+
+                    <div class="O2cont parameter">
+                           <div><h1>O2 Content <br> <h3>arterial or venous</h3></h1></div>
+                           <div> <p> $$CO2 = (Hb * 1.34 * SO2) + (PO2 * 0.003)$$</p></div>
+                           <div> <span class="normVal"> Normal Values</span> $$arterial: 20\ Vol \% \over venous: 15\ Vol\% $$ </div>  
+                    </div>
+
+                     <div class="O2cont parameter">
+                           <div><h1>Arteriovenous O2 <br>content difference</h1></div>
+                           <div> <p> $$C(a-v)O2 = CaO2-CvO2$$</p></div>
+                           <div> <span class="normVal"> Normal Value</span> $$5\ Vol\%$$ </div>  
+                     </div>
+
+                     <div class="AaGrad parameter">
+                            <div><h1>A-a O2 Gradient </h1></div>
+                            <div> <p> $$AaGradient = {(FiO2*(760-47))} - ({PaCO2 \over RQ})-PaO2$$</p></div>
+                            <div> <span class="normVal"> Normal Values</span> $$({Age \over 4})+4$$ </div>  
+                     </div>
+
+                     <div class="RespQuot parameter">
+                            <div><h1>Respiratory Quotient </h1></div>
+                            <div> <p> $$RQ = {CO2\ eliminated \over O2\ consumed}$$</p></div>
+                            <div> <span class="normVal"> Value</span> $$0.8$$ </div>  
+                     </div>
+
+                                           
+                <div class="title"> <h1>HEMODYNAMIC PARAMETERS</h1></div>
+                       
+                            <div class="map parameter">
+                                 <div> <h1>Mean Arterial<br>Pressure</h1></div>
+                                 <div><p>$$MAP = {SBP + (2*DBP) \over 3}$$</p></div> 
+                                 <div> <span class= "normVal"> Normal Value</span> $$ &#8805 60\ mmHg$$</div>     
+                            </div>
+
+                            <div class="CVP parameter">
+                                 <div> <h1>Central Venous Pressure (CVP)</h1></div>
+                                 <div><p></p></div> 
+                                 <div> <span class= "normVal"> Normal Values</span> $$  2-6\ mmHg $$</div>                                                                                     
+                            </div>
+
+                            <div class="cardOut parameter">                            
+                                 <div> <h1>Cardiac Output</h1></div>
+                                 <div><p> $$ C.O. = HR*SV$$</p></div> 
+                                 <div> <span class= "normVal"> Normal Values</span> $$5-6 L/min $$</div> 
+                           </div> 
+
+                           <div class="cardInd parameter">
+                                  <div> <h1>Cardiac Index</h1></div>
+                                  <div><p> $$ C.I. = {C.O. \over BSA}$$</p></div> 
+                                  <div> <span class= "normVal"> Normal Values</span> $$2.5-4 L/min/m^2 $$</div> 
+                           </div>                                         
+                           
+                           <div class="pawPressure parameter">
+                                  <div> <h1>Pulmonary Artery Wedge Pressure</h1></div>
+                                  <div><p></p></div> 
+                                  <div> <span class= "normVal"> Normal Values</span> $$6-12\ mmHg$$</div>     
+                           </div>
+
+                           <div class="papressure parameter">
+                                  <div> <h1>Pulmonary Artery Pressure</h1></div>
+                                  <div><p></p></div> 
+                                  <div> <span class= "normVal"> Normal Values</span> $$SYSTOLIC\  15-25\ mmHg \over DYASTOLIC\ 8-15 mmHg$$</div>                                                                                     
+                           </div>      
+ 
+                           <div class="rvpressure parameter">
+                                 <div> <h1>Right Ventricular Pressure</h1></div>
+                                 <div><p></p></div> 
+                                 <div> <span class= "normVal"> Normal Values</span> $$SYSTOLIC\  25-30 mmHg \over DYASTOLIC\ 0-8 mmHg$$</div>                                                                                     
+                          </div>      
+
+                           <div class="RApressure parameter">
+                                  <div> <h1>Right Atrial Pressure</h1></div>
+                                  <div><p></p></div> 
+                                  <div> <span class= "normVal"> Normal Values</span> $$  2-6\ mmHg $$</div>                                                                                     
+                           </div> 
+
+                           <div class="LApressure parameter">
+                                   <div> <h1>Left Atrial Pressure</h1></div>
+                                   <div><p></p></div> 
+                                   <div> <span class= "normVal"> Normal Values</span> $$  4-12\ mmHg $$</div>                                                                                     
+                           </div> 
+
+                     <div class="title"> <h1>ICP</h1></div>
+                           <div class="icpressure parameter">
+                                    <div> <h1>Intracranial Pressure</h1></div>
+                                    <div><p></p></div> 
+                                    <div> <span class= "normVal"> Normal Values</span> $$7-15\ mmHg \over\ 20-25\ mmHg\ upper\ limit\ of\ normal$$</div>                                                                                     
+                           </div>    
+                         
+                           <div class="parameter">
+                                    <div> <h1></h1></div>
+                                    <div><p></p></div> 
+                                    <div> <span class= "normVal"> </span> </div>                                                                                     
+                           </div> 
+                         
 
     </div>
     <script src="scriptCalc.js">

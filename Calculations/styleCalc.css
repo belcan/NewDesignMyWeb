@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    background-color: #999;
+    background-color: rgb(212, 209, 209);
     font-family: "Open Sans", sans-serif; 
 }
 p{
@@ -8,20 +8,55 @@ p{
 }
 .container{
     display:flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+    flex-direction: column;  
+    position: relative;            
+ }
+ .title{
+     display: flex;
+     justify-content: center;
+     position: sticky;
+     top: 0;
+     color: brown;
+     border-bottom: 2.5px outset darkmagenta;
+     border-radius: 15px;
+ }
+.parameter{
+    display: flex;
+     /* flex-direction: column;  */
+     align-items: center; 
     justify-content: space-around;
-    flex-direction: column;
-    
+    padding: 1em;
+    position: sticky;
+    top:85px;
+    border-bottom: 1px solid gray;
+   
 }
-.statCompl{
-    display: flex;
-    flex-direction: column;
-    align-items: center;;
+
+.normVal{
+    color: blue;
+    font-style: italic;
+     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* padding: 0 30px 0 30px; */
+    align-self: center;
+
 }
-.dynamCompl{
-    display: flex;
+
+@media screen 
+  and (max-width: 640px) 
+   {
+    .container{
+    display:flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;;
+
+    }
+    .parameter{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        font-size: 0.7em;
+        top:100px;
+    }
 }
