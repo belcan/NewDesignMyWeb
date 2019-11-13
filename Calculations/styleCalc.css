@@ -12,22 +12,21 @@ p{
     position: relative;            
  }
  .title{
-     display: flex;
-     justify-content: center;
-     position: sticky;
-     top: 0;
-     color: brown;
-     border-bottom: 2.5px outset darkmagenta;
-     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    color: brown;
+    border-bottom: 2.5px outset darkmagenta;
+    border-radius: 15px;
  }
 .parameter{
-    display: flex;
-     /* flex-direction: column;  */
-     align-items: center; 
+    display: flex;     
+    align-items: center; 
     justify-content: space-around;
     padding: 1em;
-    position: sticky;
-    top:85px;
+    /*position: sticky;
+    top:85px;*/
     border-bottom: 1px solid gray;
    
 }
@@ -35,10 +34,9 @@ p{
 .normVal{
     color: blue;
     font-style: italic;
-     display: flex;
+    display: flex;
     align-items: center;
-    justify-content: flex-end;
-    /* padding: 0 30px 0 30px; */
+    justify-content: flex-end;   
     align-self: center;
 
 }
@@ -52,11 +50,11 @@ p{
     flex-direction: column;
 
     }
-    .parameter{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        font-size: 0.7em;
-        top:100px;
+.parameter{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 0.7em;
+    top:100px;
     }
 }
