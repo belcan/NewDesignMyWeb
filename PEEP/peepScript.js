@@ -19,3 +19,7 @@
       document.getElementById("deltap").innerHTML = ''    
       resetbutton.style.display = "none";
     }
+
+    gsap.from('.name', {opacity: 0, duration: 1.3, y: -40, ease: 'elastic.out(1.5, 0.3)'})
+
+    gsap.from('input', {opacity: 0, duration: 1.3, y: 120, ease: 'Power2.easeInOut', stagger: 0.5})

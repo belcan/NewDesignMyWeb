@@ -16,6 +16,9 @@ function calculateM() {
         document.getElementById("calcpbm").innerHTML = "C'mon, enter real height!";
         document.getElementById("weight").innerHTML = "";
     }
+    gsap.from('img', {opacity: 0, duration: 1.5, y: 30, ease: 'Power2.easeInOut'})
+    gsap.from('#calcpbm', {opacity: 0, duration: 1.5, y: -10, ease: 'Power2.easeInOut'})
+    gsap.from('#weight', {opacity: 0, duration: 1.5, y: 10, ease: 'Power2.easeInOut'})
 }
 
 function calculateF() {
@@ -36,6 +39,9 @@ function calculateF() {
         document.getElementById("calcpbm").innerHTML = "C'mon, enter real height!";
         document.getElementById("weight").innerHTML = "";
     }
+    gsap.from('img', {opacity: 0, duration: 1.5, y: 30, ease: 'Power2.easeInOut'})
+    gsap.from('#calcpbm', {opacity: 0, duration: 1.5, y: -10, ease: 'Power2.easeInOut'})
+    gsap.from('#weight', {opacity: 0, duration: 1.5, y: 10, ease: 'Power2.easeInOut'})
 }
 
 function changecol(value) {
@@ -51,3 +57,13 @@ function changecol(value) {
     }
     document.body.style.backgroundColor = color;
 }
+    
+     gsap.from('.all', {opacity: 0, duration: 1.2, y: - 40, ease: 'Power2.easeInOut', stagger: 0.3})
+
+    // gsap.from('#pthight', {opacity: 0, duration: 1.5, y: 30, ease: 'Power2.easeInOut'})
+
+    // gsap.from('#malCol', {opacity: 0, duration: 1.5, y: - 50, ease: 'Power2.easeInOut'})
+
+    // gsap.from('#femCol', {opacity: 0, duration: 1.5, y: 50, ease: 'Power2.easeInOut'})
+
+     

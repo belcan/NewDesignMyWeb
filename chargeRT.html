@@ -176,7 +176,7 @@ document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+
 window.onload=function(){
 GetClock();
 setInterval(GetClock,1000);
- alert("Hey Charge, if this program opens in Internet Explorer it might not work properly. Close the program, right click the icon, choose 'open with...' and then pick either Firefox or Chrome. Enjoy :-)");
+ //alert("Hey Charge, if this program opens in Internet Explorer it might not work properly. Close the program, right click the icon, choose 'open with...' and then pick either Firefox or Chrome. Enjoy :-)");
 }
 
 
@@ -231,7 +231,7 @@ function ear2() {
 <br>
     <br>
 <form>
-     <h3 id="gensys" onclick="myFunction()" onmouseover="threeC2()" onmouseout="threeC()"> GSICU (3C)</h3>
+     <h3 id="gensys" class="unit" onclick="myFunction()" onmouseover="threeC2()" onmouseout="threeC()"> GSICU (3C)</h3>
   
     <input type="text" size="45" class="stats" placeholder=" stats & responders here">
     <br>
@@ -456,7 +456,7 @@ function ear2() {
   <datalist id="adstaff">
   </datalist>
     
-    <h3 id="cardio" onclick="otherFunction()" onmouseover="cvee2()" onmouseout="cvee()"> CVICU (3A8)</h3>
+    <h3 id="cardio" class="unit" onclick="otherFunction()" onmouseover="cvee2()" onmouseout="cvee()"> CVICU (3A8)</h3>
     <input type="text"size="45" class="stats" placeholder=" stats & responders here">
     <br>
     <input list="adstaff"  placeholder="RT name here" >
@@ -491,7 +491,7 @@ function ear2() {
   </datalist>
 
    
-    <h3 id= "neuro" onmouseover="neuro2()" onmouseout="neuro()"> Neuro ICU (4A4)</h3>
+    <h3 id= "neuro"  class="unit" onmouseover="neuro2()" onmouseout="neuro()"> Neuro ICU (4A4)</h3>
     <input type="text" size="45" class="stats" placeholder=" stats & responders here">
     <br>
     <input list="adstaff"  placeholder="RT name here">
@@ -513,7 +513,7 @@ function ear2() {
   <datalist id="adstaff">
   </datalist>
    
-    <h3 id= "medicine" onmouseover="med2()" onmouseout="med()"> Medicine (G)</h3>
+    <h3 id= "medicine" class="unit" onmouseover="med2()" onmouseout="med()"> Medicine (G)</h3>
     <input type="text" size="45" class="stats" placeholder=" stats & responders here">
     <br>
      <input list="adstaff"  placeholder="RT name here">
@@ -532,7 +532,7 @@ function ear2() {
   <datalist id="adstaff">
   </datalist>
    
-    <h3 id="floors" onmouseover="surg2()" onmouseout="surg()"> Floors (F)</h3>
+    <h3 id="floors" class="unit" onmouseover="surg2()" onmouseout="surg()"> Floors (F)</h3>
     <input type="text"size="45" class="stats" placeholder=" stats & responders here">
     <br>
     <input list="adstaff"  placeholder="RT name here">
@@ -548,7 +548,7 @@ function ear2() {
   <datalist id="adstaff">
   </datalist>
   
-    <h3 id="er" onmouseover="ear2()" onmouseout="ear()"> ER</h3>
+    <h3 id="er" class="unit" onmouseover="ear2()" onmouseout="ear()"> ER</h3>
     <input type="text" size="40" class="stats" placeholder=" stats & responders here">
     <br>
     <input list="adstaff"  placeholder="RT name here">
@@ -569,6 +569,9 @@ function ear2() {
     <button id ="printbtn" type="button" onclick="window.print();" >Print this page</button>
     <br>
 </form>
-
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+<script>
+  gsap.from('.unit', {opacity: 0, duration: 1, ease: 'Power2.easeInOut', stagger: 0.6})
+</script>
 </body>
 </html>
