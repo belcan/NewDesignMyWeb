@@ -1,0 +1,1 @@
+gsap.from('.parameter', {opacity: 0, duration: 1, ease: 'Power2.easeInOut', stagger: 0.3})
