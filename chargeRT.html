@@ -98,13 +98,15 @@ input:hover{
    opacity:  1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #ffffcc;
+   color:  #ffffcc;
+   
 }
 
     
     @media print {
   ::-webkit-input-placeholder { /* WebKit browsers */
       color: transparent;
+      opacity: 0;
   }
   :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
       color: transparent;
@@ -112,8 +114,9 @@ input:hover{
   ::-moz-placeholder { /* Mozilla Firefox 19+ */
       color: transparent;
   }
- input :-ms-input-placeholder { /* Internet Explorer 10+ */
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
       color: transparent;
+      opacity: 0;
   }
     }
     
