@@ -19,14 +19,14 @@
           margin: 3px;
           font-size: 1.5em;
           margin-bottom: 9px;
-         // margin-right: 200px;
-          //cursor: pointer;
+         /* margin-right: 200px;
+          cursor: pointer; */
           border: outset;
           border-color: #F6CFB9;
          text-align: center;
           box-shadow: 10px 4px 10px rgba(0,0,0,0.6);       
         }
-
+       /* hide 000webhost image */
         img {
       display: none;
     }
@@ -108,7 +108,7 @@ input:hover{
     @media print {
   ::-webkit-input-placeholder { /* WebKit browsers */
       color: transparent;
-      opacity: 0;
+      opacity: 0; /*hide placeholders from printing */
   }
   :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
       color: transparent;
@@ -118,7 +118,7 @@ input:hover{
   }
   :-ms-input-placeholder { /* Internet Explorer 10+ */
       color: transparent;
-      opacity: 0;
+      opacity: 0;  /*hide placeholders from printing */
   }
     }
     

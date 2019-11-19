@@ -105,3 +105,6 @@ body {
     margin: 0px 50px 75px 50px;
     text-align: center;
 }
+ a {
+     display: none; /* block displaing 000webhost*/
+ }
