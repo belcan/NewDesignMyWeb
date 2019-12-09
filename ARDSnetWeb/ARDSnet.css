@@ -71,6 +71,11 @@ output{
     background-color: #9fb2db;
 }
 
+.images{
+    display: flex;
+    justify-content: center;
+}
+
 footer{
     background: #869dce ;
     height: 1em;
