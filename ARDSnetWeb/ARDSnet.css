@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+}
+
+header{
+    background: #b7c7e9 ;
+}
+
+.container{
+    background: #869dce;    
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+}
+#title{
+    display: flex;
+    justify-content: center;
+    letter-spacing: .05em;
+    text-shadow: 
+      4px 4px 0px #d5d5d5, 
+      7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.radio{
+    display:block;
+    margin-left: 2em;
+    font-weight: 900;
+}
+
+input{
+    margin-top:1em;
+    width: 3em;
+    font-size: larger;
+}
+
+.patient{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items:center;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+.patient p{
+    font-weight: 700;
+}
+
+.volumes{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.volumes p{
+    display: inline;    
+    font-weight: 700;
+    text-shadow: #0565a5;
+}
+
+#ventTidVol{
+    font-weight: 800;
+    margin-bottom: 1em;
+    margin-left: -1.5em;
+}
+
+output{
+    font-weight: 900;
+    font-size: x-large;
+    background-color: #9fb2db;
+}
+
+footer{
+    background: #869dce ;
+    height: 1em;
+}
+
+#calcButton,#printButton{
+    width: 200px;
+    height: 50px;
+    background: none;
+    border: 4px solid;
+    color: #0565a5;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+
+}
+
+#calcButton::before, #calcButton::after, #printButton::before, #printButton::after{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    background: #869dce;
+    transform: skewX(50deg);
+    transition: .4s linear;
+}
+
+#calcButton::before, #printButton::before{
+    top: -4px;
+    left: 10%;
+}
+
+#calcButton::after, #printButton::after{
+    bottom: -4px;
+    right: 10%;
+}
+
+#calcButton:hover::before, #printButton:hover::before{
+    left: 80%;
+}
+
+#calcButton:hover::after, #printButton:hover::after{
+    right: 80%;
+}
+
+@media print {
+    #printButton {
+        display :  none;
+    }
+
+    a {
+        display: none; /* block displaing 000webhost*/
+    }
+
+    @media screen 
+  and (max-width: 640px) 
+   {
+    .container{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    }
