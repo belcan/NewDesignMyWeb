@@ -132,7 +132,7 @@ footer{
         flex-direction: column; 
          page-break-inside: avoid;         
     }
-   
+}
     a {
         display: none; /* block displaing 000webhost*/
     }
