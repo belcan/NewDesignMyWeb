@@ -141,11 +141,13 @@ footer{
   and (max-width: 700px) 
    {
     .container{
-    display:flex;    
+    display:flex;  
+    justify-content: space-around;  
     flex-direction: column;    
     }
     .images{
         display: flex;
+        justify-content: left;
         flex-direction: column;  
     }
    }
