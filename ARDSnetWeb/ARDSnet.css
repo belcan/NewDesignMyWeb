@@ -132,6 +132,9 @@ footer{
         flex-direction: column; 
          page-break-inside: avoid;         
     }
+    .container{
+        margin-top: 150px;
+    }
 }
     a {
         display: none; /* block displaing 000webhost*/
@@ -146,6 +149,9 @@ footer{
     flex-direction: column;    
     }
     .images{
+        width: 100%;
+        height: auto;
+        max-width: 10vw;
         display: flex;
         justify-content: left;
         flex-direction: column;  
