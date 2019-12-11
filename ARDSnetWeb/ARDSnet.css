@@ -150,10 +150,10 @@ footer{
     }
     .images{
         
-        display: flex;
+        display: block;
        /* justify-content: left;*/
         flex-direction: column;
-       /* align-items: flex-start;  */
-       align-self: flex-end;
+       /* align-items: flex-start;  
+       align-self: flex-end;*/
     }
    }
