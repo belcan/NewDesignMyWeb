@@ -353,6 +353,10 @@ color: rgb(24, 47, 77);
 cursor: auto;
 }
 
+img{
+    display: none;
+}
+
 @media only screen and (orientation: portrait) {
     html {
         padding: 0em 0em 47em 0em;
