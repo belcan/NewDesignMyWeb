@@ -33,6 +33,9 @@ header {
 input {
     margin-top: 1em;
     width: 3em;
+    border-radius: 7px;
+    border: none;
+    background: #b7c7e9;
     font-size: larger;
 }
 
