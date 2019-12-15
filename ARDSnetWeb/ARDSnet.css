@@ -1,87 +1,90 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: "montserrat",sans-serif;
+    font-family: "montserrat", sans-serif;
 }
 
-header{
-    background: #b7c7e9 ;
+header {
+    background: #b7c7e9;
 }
 
-.container{
-    background: #869dce;    
+.container {
+    background: #869dce;
     display: flex;
-    justify-content:space-around;
-    align-items:center;
+    justify-content: space-around;
+    align-items: center;
 }
-#title{
+
+#title {
     display: flex;
     justify-content: center;
     letter-spacing: .05em;
-    text-shadow: 
-      4px 4px 0px #d5d5d5, 
-      7px 7px 0px rgba(0, 0, 0, 0.2);
+    text-shadow:
+        4px 4px 0px #d5d5d5,
+        7px 7px 0px rgba(0, 0, 0, 0.2);
 }
 
-.radio{
-    display:block;
+.radio {
+    display: block;
     margin-left: 2em;
     font-weight: 900;
 }
 
-input{
-    margin-top:1em;
+input {
+    margin-top: 1em;
     width: 3em;
     font-size: larger;
 }
 
-.patient{
+.patient {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    align-items:center;
+    align-items: center;
     margin-bottom: 1em;
     padding: 1em;
 }
-.patient p{
+
+.patient p {
     font-weight: 700;
 }
 
-.volumes{
+.volumes {
     display: flex;
     justify-content: flex-end;
 }
 
-.volumes p{
-    display: inline;    
+.volumes p {
+    display: inline;
     font-weight: 700;
     text-shadow: #0565a5;
 }
 
-#ventTidVol{
+#ventTidVol {
     font-weight: 800;
     margin-bottom: 1em;
     margin-left: -1.5em;
 }
 
-output{
+output {
     font-weight: 900;
     font-size: x-large;
     background-color: #9fb2db;
 }
 
-.images{
+.images {
     display: flex;
     justify-content: center;
 }
 
-footer{
-    background: #869dce ;
+footer {
+    background: #869dce;
     height: 1em;
 }
 
-#calcButton,#printButton{
+#calcButton,
+#printButton {
     width: 200px;
     height: 50px;
     background: none;
@@ -95,7 +98,10 @@ footer{
 
 }
 
-#calcButton::before, #calcButton::after, #printButton::before, #printButton::after{
+#calcButton::before,
+#calcButton::after,
+#printButton::before,
+#printButton::after {
     content: "";
     position: absolute;
     width: 14px;
@@ -105,55 +111,54 @@ footer{
     transition: .4s linear;
 }
 
-#calcButton::before, #printButton::before{
+#calcButton::before,
+#printButton::before {
     top: -4px;
     left: 10%;
 }
 
-#calcButton::after, #printButton::after{
+#calcButton::after,
+#printButton::after {
     bottom: -4px;
     right: 10%;
 }
 
-#calcButton:hover::before, #printButton:hover::before{
+#calcButton:hover::before,
+#printButton:hover::before {
     left: 80%;
 }
 
-#calcButton:hover::after, #printButton:hover::after{
+#calcButton:hover::after,
+#printButton:hover::after {
     right: 80%;
 }
 
 @media print {
     #printButton {
-        display :  none;
+        display: none;
     }
-    .images{
+
+    .images {
         display: flex;
-        flex-direction: column; 
-         page-break-inside: avoid;         
+        flex-direction: column;
+        page-break-inside: avoid;
     }
-    .container{
+
+    .container {
         margin-top: 150px;
     }
 }
-    a {
-        display: none; /* block displaing 000webhost*/
+
+@media screen and (max-width: 700px) {
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
     }
 
-    @media screen 
-  and (max-width: 700px) 
-   {
-    .container{
-    display:flex;  
-    justify-content: space-around;  
-    flex-direction: column;    
-    }
-    .images{
-        
-        display: block;
-       /* justify-content: left;
+    .images {
+        display: flex;
+        justify-content: space-around;
         flex-direction: column;
-        align-items: flex-start;  
-       align-self: flex-end;*/
     }
-   }
+}
