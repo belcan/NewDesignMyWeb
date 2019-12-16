@@ -1,12 +1,13 @@
 body {
     background: #262a2b;
 }
+
 /*=====
 removes blue outline on links. 
 Should also add :focus to links' :hover 
 for keyboard navigating
 =======*/
-:focus{
+:focus {
     outline: none;
 }
 
@@ -42,8 +43,9 @@ for keyboard navigating
     right: 10px;
     transition: all 0.3s ease-in-out;
 }
+
 /* added .dontobscured to prevent h4 interfering with h3*/
-.dontobscure{
+.dontobscure {
     opacity: 0;
 }
 
@@ -286,7 +288,7 @@ h1 {
     background-color: #DEF3;
     border-style: outset;
     border-width: 2px;
-    border-color: brown;
+    border-color: rgb(34, 29, 29);
     border-radius: 20px;
     padding: 10px;
     background-image: url("madeonearth.png");
@@ -347,13 +349,14 @@ button {
     -webkit-transform: scale(1.2);
     transform: scale(1.6);
 }
-.hidden{
-text-decoration: none;
-color: rgb(24, 47, 77);
-cursor: auto;
+
+.hidden {
+    text-decoration: none;
+    color: rgb(24, 47, 77);
+    cursor: auto;
 }
 
-img{
+img {
     display: none;
 }
 

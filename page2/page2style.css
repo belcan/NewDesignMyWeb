@@ -1,6 +1,6 @@
 body {
     background: #262a2b;
-    background-image: url("space2.jpg");
+    background-image: url("../space2.jpg");
     background-size: cover;
 
     background-position: center;
@@ -61,7 +61,7 @@ h1 {
     background-color: #DEF3;
     border-style: outset;
     border-width: 2px;
-    border-color: brown;
+    border-color: rgb(34, 28, 28);
     border-radius: 20px;
     padding: 10px;
     background-image: url("madeonearth.png");
