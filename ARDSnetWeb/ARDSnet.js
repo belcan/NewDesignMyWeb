@@ -15,6 +15,8 @@ function calculateM() {
         
         calcButton.style.visibility='hidden';
         printButton.style.visibility='visible';
+
+        gsap.from('.volumes, output', {opacity: 0, duration: 1.1, ease: 'elastic.out(1.5, 0.3)', stagger: 0.2})
     }
 
 
@@ -33,6 +35,8 @@ function calculateF() {
          
         calcButton.style.visibility='hidden';
         printButton.style.visibility='visible';
+
+        gsap.from('.volumes, output', {opacity: 0, duration: 1.1, ease: 'elastic.out(1.5, 0.3)', stagger: 0.2})
     }
     
 
