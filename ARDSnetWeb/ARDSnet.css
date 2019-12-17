@@ -30,7 +30,7 @@ header {
     font-weight: 900;
 }
 
-input {
+#inputHeight {
     margin-top: 1em;
     width: 3em;
     border-radius: 7px;
