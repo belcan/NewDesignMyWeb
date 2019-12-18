@@ -25,9 +25,63 @@ header {
 }
 
 .radio {
-    display: block;
     margin-left: 2em;
     font-weight: 900;
+    color: #0565a5;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.radio {
+    list-style-type: none;
+    margin: 25px 0 0 0;
+    padding: 0;
+}
+
+.radio li {
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 100px;
+    height: 40px;
+    position: relative;
+}
+
+.radio label,
+.radio input {
+    /*display: block;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.radio input[type="radio"] {
+    opacity: 0.01;
+    z-index: 100;
+}
+
+.radio input[type="radio"]:checked+label,
+.Checked+label {
+    background: #0565a5;
+    color: #b7c7e9;
+}
+
+.radio label {
+    padding: 5px;
+    border: 1px solid #0565a5;
+    cursor: pointer;
+    z-index: 90;
+}
+
+.radio label:hover {
+    background: #DDD;
 }
 
 #inputHeight {
