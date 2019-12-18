@@ -27,7 +27,7 @@ header {
 .radio {
     margin-left: 2em;
     font-weight: 900;
-    color: #0565a5;
+    color: #b7c7e9c4;
 }
 
 ul {
@@ -70,7 +70,7 @@ ul {
 .radio input[type="radio"]:checked+label,
 .Checked+label {
     background: #0565a5;
-    color: #b7c7e9;
+    color: #121316;
 }
 
 .radio label {
@@ -204,6 +204,17 @@ footer {
     .container {
         margin-top: 150px;
     }
+
+    /* .radio label {
+        color: #d5d5d5;
+    }
+
+    .radio input[type="radio"]:checked+label,
+    .Checked+label {
+        background: #1b1f22;
+        color: #b7c7e9;
+    } */
+
 }
 
 @media screen and (max-width: 700px) {
