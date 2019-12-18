@@ -24,11 +24,11 @@ header {
         7px 7px 0px rgba(0, 0, 0, 0.2);
 }
 
-.radio {
+/*.radio {
     margin-left: 2em;
     font-weight: 900;
     color: #b7c7e9c4;
-}
+} */
 
 ul {
     list-style-type: none;
@@ -42,6 +42,8 @@ ul {
     list-style-type: none;
     margin: 25px 0 0 0;
     padding: 0;
+    color: #b7c7e9c4;
+    font-weight: 900;
 }
 
 .radio li {
