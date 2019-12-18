@@ -207,15 +207,17 @@ footer {
         margin-top: 150px;
     }
 
-    /* .radio label {
-        color: #d5d5d5;
+    .radio label {
+        color: #f5f3f3;
+        opacity: 0.3;
     }
 
     .radio input[type="radio"]:checked+label,
     .Checked+label {
-        background: #1b1f22;
-        color: #b7c7e9;
-    } */
+        background: #82a6c2;
+        color: #020611;
+        opacity: 1;
+    }
 
 }
 
