@@ -73,6 +73,7 @@ ul {
 .Checked+label {
     background: #0565a5;
     color: #121316;
+    text-shadow: 1px 0px 1px #b7c7e9;
 }
 
 .radio label {
@@ -83,7 +84,8 @@ ul {
 }
 
 .radio label:hover {
-    background: #DDD;
+    background: #b7c7e9;
+    color: black;
 }
 
 #inputHeight {
