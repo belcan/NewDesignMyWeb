@@ -72,13 +72,14 @@ ul {
 .radio input[type="radio"]:checked+label,
 .Checked+label {
     background: #0565a5;
-    color: #121316;
-    text-shadow: 1px 0px 1px #b7c7e9;
+    color: #b7c7e9;
+    text-shadow: 1px 0px 1px #141518;
 }
 
 .radio label {
     padding: 5px;
     border: 1px solid #0565a5;
+    color: #337eaf;
     cursor: pointer;
     z-index: 90;
 }
