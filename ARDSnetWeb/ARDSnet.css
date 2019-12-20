@@ -220,6 +220,8 @@ footer {
         background: #82a6c2;
         color: #020611;
         opacity: 1;
+        text-shadow: none;
+
     }
 
 }
