@@ -107,3 +107,11 @@ button {
   margin-right: 40px;
   text-decoration: none;
 }
+
+a:link {
+  color: rgb(150, 206, 87);
+}
+
+a:visited {
+  color: rgb(177, 58, 14);
+}
