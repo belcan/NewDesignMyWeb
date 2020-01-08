@@ -1,17 +1,20 @@
-*{
+* {
     box-sizing: border-box;
     background-color: rgb(212, 209, 209);
-    font-family: "Open Sans", sans-serif; 
+    font-family: "Open Sans", sans-serif;
 }
-p{
+
+p {
     font-size: 1.2em;
 }
-.container{
-    display:flex;
-    flex-direction: column;  
-    position: relative;            
- }
- .title{
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.title {
     display: flex;
     justify-content: center;
     position: sticky;
@@ -19,42 +22,55 @@ p{
     color: brown;
     border-bottom: 2.5px outset darkmagenta;
     border-radius: 15px;
- }
-.parameter{
-    display: flex;     
-    align-items: center; 
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-1em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.parameter {
+    display: flex;
+    align-items: center;
     justify-content: space-around;
     padding: 1em;
     /*position: sticky;
     top:85px;*/
     border-bottom: 1px solid gray;
-   
+
 }
 
-.normVal{
+.normVal {
     color: blue;
     font-style: italic;
     display: flex;
     align-items: center;
-    justify-content: flex-end;   
+    justify-content: flex-end;
     align-self: center;
 
 }
 
-@media screen 
-  and (max-width: 640px) 
-   {
-    .container{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+@media screen and (max-width: 640px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
 
     }
-.parameter{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    font-size: 0.7em;
-    top:100px;
+
+    .parameter {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        font-size: 0.7em;
+        top: 100px;
     }
 }
