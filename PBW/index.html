@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PBW</title>
-    <link rel="stylesheet" href="mystyle.css">
-</head>
+    <link rel="stylesheet" href="mystyle.css" />
+  </head>
 
-<body>
+  <body>
     <div>
-        <h1 id="pbm" class="all">Predicted Body Weight</h1>
+      <h1 id="pbm" class="all">Predicted Body Weight</h1>
     </div>
     <!-- <div>
         <input type="radio" name="gender" value="male" id="male" onClick="changecol('m');onClick=calculateM()">
@@ -18,30 +18,40 @@
         <inline id="femCol"> Female</inline><br>
     </div> -->
     <div>
-        <h3 id="pthight" class="all">Patient's height in cm</h3>
+      <h3 id="pthight" class="all">Patient's height in cm</h3>
 
-        <input type=number id="number">
-        <p id="calcpbm"></p>
-        <p id="weight"></p>
+      <input type="number" id="number" />
+      <p id="calcpbm"></p>
+      <p id="weight"></p>
     </div>
 
     <div>
-        <label>
-            <input type="radio" name="gender" value="male" id="male" onClick="changecol('m');onClick=calculateM()"><br>
-            <div id="malCol" class="all">Male</div>
-        </label>
-        <label>
-            <input type="radio" name="gender" value="female" id="female" onClick="changecol('f');onClick=calculateF()">
-            <div id="femCol" class="all"> Female</div><br>
-        </label>
+      <label>
+        <input
+          type="radio"
+          name="gender"
+          value="male"
+          id="male"
+          onClick="changecol('m');onClick=calculateM()"
+        /><br />
+        <div id="malCol" class="all">Male</div>
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="gender"
+          value="female"
+          id="female"
+          onClick="changecol('f');onClick=calculateF()"
+        />
+        <div id="femCol" class="all">Female</div>
+        <br />
+      </label>
     </div>
 
     <!--  <button type="button" id="button" onclick="calculate();onClick = this.style.visibility='hidden'">Calculate</button> -->
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
 
-    <script src="myscript.js">
-
-    </script>
-</body>
-
+    <script src="myscript.js"></script>
+  </body>
 </html>
