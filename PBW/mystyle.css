@@ -102,6 +102,6 @@ body {
 
 @media (max-width: 600px) {
   body {
-    font-size: 200%;
+    font-size: 2em;
   }
 }
