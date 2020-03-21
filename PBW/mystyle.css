@@ -100,7 +100,7 @@ body {
   text-align: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 400px) {
   body {
     font-size: 2em;
   }
