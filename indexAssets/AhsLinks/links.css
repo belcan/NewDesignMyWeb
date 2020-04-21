@@ -41,7 +41,8 @@ h1 {
 .pol-text,
 .email-text,
 .esp-text,
-.epeople-text {
+.epeople-text,
+.citipage-text {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -53,6 +54,10 @@ h1 {
   transition: transform 0.8s;
   z-index: 1;
 }
-.pol-text:hover {
+.pol-text:hover,
+.email-text:hover,
+.esp-text:hover,
+.epeople-text:hover,
+.citipage-text:hover {
   transform: scale(1.5);
 }
