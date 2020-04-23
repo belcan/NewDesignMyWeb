@@ -61,3 +61,6 @@ h1 {
 .citipage-text:hover {
   transform: scale(1.5);
 }
+img {
+  max-width: 100%;
+}
