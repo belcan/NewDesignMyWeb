@@ -34,3 +34,10 @@ a:link {
 a:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 600px) {
+  .petsList {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0em;
+  }
+}
