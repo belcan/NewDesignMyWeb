@@ -8,36 +8,61 @@
 .title {
   display: flex;
   justify-content: center;
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 900;
-  margin: 1em;
-  color: white;
+  margin: 0.5em;
+  color: #00ffff;
   text-shadow: 2px 2px 4px #000000;
 }
 
 .petsList {
   display: flex;
-  flex-direction: column;
-  margin-left: 5em;
-  justify-items: stretch;
-  font-size: 2rem;
+  justify-content: space-evenly;
+  align-items: baseline;
+  font-size: 3rem;
 }
-.pepper {
-  margin-bottom: 1em;
-}
-.newton {
-  padding-top: 0.5em;
+a{
+  color: #000000;
 }
 a:link {
   text-decoration: none;
+  
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: rgba(0, 0, 0, 0.19);
 }
+img{
+  transition: transform 1s;
+}
+img:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: translateY(-4px);
+}
+.pepper-text, .newton-text{
+  transition: transform 1s;
+}
+.pepper-text:hover, .newton-text:hover{
+    display: flex;
+    flex-direction: column;
+    text-shadow: 0.5px 0.5px 1px #000000;
+    transform: scale(1.02);
+
+    
+    
+  }
+.pepper-text{
+  
+ 
+  }
+  .newton-text{
+  
+ 
+  }
 @media screen and (max-width: 600px) {
   .petsList {
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin-left: 0em;
   }
 }
