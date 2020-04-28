@@ -46,9 +46,9 @@ img:hover{
     flex-direction: column;
     text-shadow: 0.5px 0.5px 1px #000000;
     transform: scale(1.02);
-
-    
-    
+  }
+  img, .pepper-text, .newton-text{
+    max-width: 100%;
   }
 .pepper-text{
   
