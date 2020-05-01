@@ -14,7 +14,21 @@
   color: #365f81;
   text-shadow: 2px 2px 4px #000000;
   background-color: rgb(248, 220, 185);
-  padding:0.3em;
+  padding:0.1rem;
+}
+
+.pepper-pic,.newton-pic{  
+  background-color: rgb(248, 220, 185);
+  padding: 0.5em;
+}
+.pepper, .newton{
+  background-color: rgb(248, 220, 185);
+}
+.pepper-text, .newton-text{
+  background-color: rgb(248, 220, 185);
+  
+ 
+  
 }
 
 .petsList {
@@ -42,7 +56,7 @@ img:hover{
 }
 .pepper-text, .newton-text{
   text-align: center;
-  margin-left: 0.5em;
+  
   transition: transform 1s;
 }
 .pepper-text:hover, .newton-text:hover{
@@ -54,14 +68,7 @@ img:hover{
   img, .pepper-text, .newton-text{
     max-width: 100%;
   }
-.pepper-text{
-  
- 
-  }
-  .newton-text{
-  
- 
-  }
+
 @media screen and (max-width: 600px) {
   .petsList {
     justify-content: center;
