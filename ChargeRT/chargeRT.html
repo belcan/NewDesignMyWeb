@@ -1,658 +1,627 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style type="text/css">
-      input {
-        border: none;
-        padding: 1.5px;
-        margin: 1px;
-        font-weight: bold;
-        background-color: #ffffcc;
-        text-transform: uppercase;
-        line-height: 90%;
-      }
-      body {
-        background-color: #f2eefe;
-      }
 
-      h3 {
-        padding: 0.5px;
-        margin: 3px;
-        font-size: 1.5em;
-        margin-bottom: 9px;
-        /* margin-right: 200px;
+<head>
+  <style type="text/css">
+    input {
+      border: none;
+      padding: 1.5px;
+      margin: 1px;
+      font-weight: bold;
+      background-color: #ffffcc;
+      text-transform: uppercase;
+      line-height: 90%;
+    }
+
+    body {
+      background-color: #f2eefe;
+    }
+
+    h3 {
+      padding: 0.5px;
+      margin: 3px;
+      font-size: 1.5em;
+      margin-bottom: 9px;
+      /* margin-right: 200px;
           cursor: pointer; */
-        border: outset;
-        border-color: #f6cfb9;
-        text-align: center;
-        box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.6);
-      }
+      border: outset;
+      border-color: #f6cfb9;
+      text-align: center;
+      box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.6);
+    }
 
-      .er:hover {
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-      }
+    .er:hover {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
 
-      .stats {
-        font-style: oblique;
-        font-size: 0.9em;
-        font-family: Arial, sans-serif;
-        font-weight: 200;
-      }
-      #clockbox {
-        border: double;
-        border-radius: 25px;
-        padding: 3px;
-        font-size: 1.5em;
-        margin-left: 20px;
-        display: inline;
-        box-shadow: 10px 4px 10px 0px rgba(0, 0, 0, 0.4);
-      }
-      #clockbox:hover {
-        background-color: #8ffec3;
-        box-shadow: 10px 4px 10px 0px rgba(0, 0, 0, 0.8);
-      }
-      #printbtn {
-        margin-left: 600px;
-        margin-top: 10px;
-        border-style: groove;
-        border-radius: 5%;
-        padding: 0.5em;
-        text-shadow: 1px 1px 6px #def3f3;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bolder;
-        color: rgb(20, 22, 22);
-        background-color: #fbeaff;
-        transition-property: background-color;
-        transition-property: color;
-        transition-duration: 0.5s;
-        transition-timing-function: linear;
-        /*  -webkit-transition: all 1.3s ease-in-out;
+    .stats {
+      font-style: oblique;
+      font-size: 0.9em;
+      font-family: Arial, sans-serif;
+      font-weight: 200;
+    }
+
+    #clockbox {
+      border: double;
+      border-radius: 25px;
+      padding: 3px;
+      font-size: 1.5em;
+      margin-left: 20px;
+      display: inline;
+      box-shadow: 10px 4px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    #clockbox:hover {
+      background-color: #8ffec3;
+      box-shadow: 10px 4px 10px 0px rgba(0, 0, 0, 0.8);
+    }
+
+    #printbtn {
+      margin-left: 600px;
+      margin-top: 10px;
+      border-style: groove;
+      border-radius: 5%;
+      padding: 0.5em;
+      text-shadow: 1px 1px 6px #def3f3;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bolder;
+      color: rgb(20, 22, 22);
+      background-color: #fbeaff;
+      transition-property: background-color;
+      transition-property: color;
+      transition-duration: 0.5s;
+      transition-timing-function: linear;
+      /*  -webkit-transition: all 1.3s ease-in-out;
 	-moz-transition:    all 1.3s ease-in-out;
 	-o-transition:      all 1.3s ease-in-out;
 	-ms-transition:     all 1.3s ease-in-out;  */
-        box-shadow: 10px 4px 10px 0px rgba(0, 0, 0, 0.4);
-      }
+      box-shadow: 10px 4px 10px 0px rgba(0, 0, 0, 0.4);
+    }
 
-      #printbtn:hover {
-        color: bisque;
-        background-color: #5e3c9c;
-        cursor: pointer;
-        /*  -webkit-transform: rotate(360deg) scale(1.3);
+    #printbtn:hover {
+      color: bisque;
+      background-color: #5e3c9c;
+      cursor: pointer;
+      /*  -webkit-transform: rotate(360deg) scale(1.3);
 	-moz-transform:    rotate(360deg) scale(1.3);
 	-o-transform:      rotate(360deg) scale(1.3);
 	-ms-transform:     rotate(360deg) scale(1.3); */
-        box-shadow: 10px 4px 10px 0px rgba(0, 0, 0, 0.8);
-      }
+      box-shadow: 10px 4px 10px 0px rgba(0, 0, 0, 0.8);
+    }
 
-      h3:hover {
-        color: darkorchid;
-      }
+    h3:hover {
+      color: darkorchid;
+    }
 
-      input:hover {
-        background-color: #20bca7;
-      }
+    input:hover {
+      background-color: #20bca7;
+    }
 
+    ::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: #ffffcc;
+    }
+
+    :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #ffffcc;
+      opacity: 1;
+    }
+
+    ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #ffffcc;
+      opacity: 1;
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #ffffcc;
+    }
+
+    @media print {
       ::-webkit-input-placeholder {
-        /* WebKit, Blink, Edge */
-        color: #ffffcc;
+        /* WebKit browsers */
+        color: transparent;
+        opacity: 0;
+        /*hide placeholders from printing */
       }
+
       :-moz-placeholder {
         /* Mozilla Firefox 4 to 18 */
-        color: #ffffcc;
-        opacity: 1;
+        color: transparent;
       }
+
       ::-moz-placeholder {
         /* Mozilla Firefox 19+ */
-        color: #ffffcc;
-        opacity: 1;
+        color: transparent;
       }
+
       :-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: #ffffcc;
+        /* Internet Explorer 10+ */
+        color: transparent;
+        opacity: 0;
+        /*hide placeholders from printing */
+      }
+    }
+
+    @media print {
+      #printbtn {
+        display: none;
       }
 
-      @media print {
-        ::-webkit-input-placeholder {
-          /* WebKit browsers */
-          color: transparent;
-          opacity: 0; /*hide placeholders from printing */
-        }
-        :-moz-placeholder {
-          /* Mozilla Firefox 4 to 18 */
-          color: transparent;
-        }
-        ::-moz-placeholder {
-          /* Mozilla Firefox 19+ */
-          color: transparent;
-        }
-        :-ms-input-placeholder {
-          /* Internet Explorer 10+ */
-          color: transparent;
-          opacity: 0; /*hide placeholders from printing */
-        }
+      img {
+        display: none;
       }
-
-      @media print {
-        #printbtn {
-          display: none;
-        }
-        img {
-          display: none;
-        }
-      }
-    </style>
-    <script>
-      /*
-    function myFunction() {
-    var button = document.getElementById("gensys");
-
-    if (document.getElementById("gensys").innerHTML === "GSICU (3C) is The Best!") {
-        document.getElementById("gensys").innerHTML = "GSICU (3C)";
     }
-    else {
-        document.getElementById("gensys").innerHTML = "GSICU (3C) is The Best!";
-    }
-   }
+  </style>
+  <script>
+    /*
+  function myFunction() {
+  var button = document.getElementById("gensys");
 
- function otherFunction() {
-    var button = document.getElementById("gensys");
+  if (document.getElementById("gensys").innerHTML === "GSICU (3C) is The Best!") {
+      document.getElementById("gensys").innerHTML = "GSICU (3C)";
+  }
+  else {
+      document.getElementById("gensys").innerHTML = "GSICU (3C) is The Best!";
+  }
+ }
 
-    if (document.getElementById("cardio").innerHTML === " CVICU (3A8) Almost as good as 3C!") {
-        document.getElementById("cardio").innerHTML = "CVICU (3A8)";
-    }
-    else {
-        document.getElementById("cardio").innerHTML = " CVICU (3A8) Almost as good as 3C!";
-    }
-   }
+function otherFunction() {
+  var button = document.getElementById("gensys");
+
+  if (document.getElementById("cardio").innerHTML === " CVICU (3A8) Almost as good as 3C!") {
+      document.getElementById("cardio").innerHTML = "CVICU (3A8)";
+  }
+  else {
+      document.getElementById("cardio").innerHTML = " CVICU (3A8) Almost as good as 3C!";
+  }
+ }
 */
 
-      var tday = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ];
-      var tmonth = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-      ];
+    var tday = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ];
+    var tmonth = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
 
-      function GetClock() {
-        var d = new Date();
-        var nday = d.getDay(),
-          nmonth = d.getMonth(),
-          ndate = d.getDate(),
-          nhour = d.getHours(),
-          nminute = d.getMinutes();
-        var shift;
-        switch (true) {
-          case nhour > 7 && nhour <= 19:
-            shift = "Nights";
-            break;
-          case nhour > 19 || nhour <= 7:
-            shift = "Days";
-            break;
-        }
-
-        document.getElementById("clockbox").innerHTML =
-          "" +
-          tday[nday] +
-          ", " +
-          tmonth[nmonth] +
-          " " +
-          ndate +
-          "" +
-          ". " +
-          shift;
+    function GetClock() {
+      var d = new Date();
+      var nday = d.getDay(),
+        nmonth = d.getMonth(),
+        ndate = d.getDate(),
+        nhour = d.getHours(),
+        nminute = d.getMinutes();
+      var shift;
+      switch (true) {
+        case nhour > 7 && nhour <= 19:
+          shift = "Nights";
+          break;
+        case nhour > 19 || nhour <= 7:
+          shift = "Days";
+          break;
       }
 
-      window.onload = function() {
-        GetClock();
-        setInterval(GetClock, 1000);
-        //alert("Hey Charge, if this program opens in Internet Explorer it might not work properly. Close the program, right click the icon, choose 'open with...' and then pick either Firefox or Chrome. Enjoy :-)");
-      };
+      document.getElementById("clockbox").innerHTML =
+        "" +
+        tday[nday] +
+        ", " +
+        tmonth[nmonth] +
+        " " +
+        ndate +
+        "" +
+        ". " +
+        shift;
+    }
 
-      function easterEgg2() {
-        document.getElementById("clockbox").innerHTML = "Say Hi to Nick!";
-      }
-      function threeC() {
-        document.getElementById("gensys").innerHTML = "GSICU (3C)";
-      }
-      function threeC2() {
-        document.getElementById("gensys").innerHTML = "Hello Charge RT";
-      }
-      function cvee() {
-        document.getElementById("cardio").innerHTML = "CVICU (3A8)";
-      }
-      function cvee2() {
-        document.getElementById("cardio").innerHTML =
-          "Hope your shift is going well";
-      }
-      function neuro() {
-        document.getElementById("neuro").innerHTML = "Neuro ICU (4A4)";
-      }
-      function neuro2() {
-        document.getElementById("neuro").innerHTML =
-          "We are almost done for the day!";
-      }
+    window.onload = function () {
+      GetClock();
+      setInterval(GetClock, 1000);
+      //alert("Hey Charge, if this program opens in Internet Explorer it might not work properly. Close the program, right click the icon, choose 'open with...' and then pick either Firefox or Chrome. Enjoy :-)");
+    };
 
-      function med() {
-        document.getElementById("medicine").innerHTML = "Medicine (G)";
-      }
-      function med2() {
-        document.getElementById("medicine").innerHTML = "Yeaah almost there!";
-      }
+    function easterEgg2() {
+      document.getElementById("clockbox").innerHTML = "Say Hi to Nick!";
+    }
+    function threeC() {
+      document.getElementById("gensys").innerHTML = "GSICU (3C)";
+    }
+    function threeC2() {
+      document.getElementById("gensys").innerHTML = "Hello Charge RT";
+    }
+    function cvee() {
+      document.getElementById("cardio").innerHTML = "CVICU (3A8)";
+    }
+    function cvee2() {
+      document.getElementById("cardio").innerHTML =
+        "Hope your shift is going well";
+    }
+    function neuro() {
+      document.getElementById("neuro").innerHTML = "Neuro ICU (4A4)";
+    }
+    function neuro2() {
+      document.getElementById("neuro").innerHTML =
+        "We are almost done for the day!";
+    }
 
-      function surg() {
-        document.getElementById("floors").innerHTML = "Floors (F)";
-      }
-      function surg2() {
-        document.getElementById("floors").innerHTML =
-          "Just a little bit longer";
-      }
+    function med() {
+      document.getElementById("medicine").innerHTML = "Medicine (G)";
+    }
+    function med2() {
+      document.getElementById("medicine").innerHTML = "Yeaah almost there!";
+    }
 
-      function ear() {
-        document.getElementById("er").innerHTML = "ER";
-      }
-      function ear2() {
-        document.getElementById("er").innerHTML = "You have a good one!";
-      }
-    </script>
-  </head>
-  <body>
-    <div id="clockbox" onclick="easterEgg2()"></div>
+    function surg() {
+      document.getElementById("floors").innerHTML = "Floors (F)";
+    }
+    function surg2() {
+      document.getElementById("floors").innerHTML =
+        "Just a little bit longer";
+    }
+
+    function ear() {
+      document.getElementById("er").innerHTML = "ER";
+    }
+    function ear2() {
+      document.getElementById("er").innerHTML = "You have a good one!";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="clockbox" onclick="easterEgg2()"></div>
+  <br />
+  <br />
+  <form>
+    <h3 id="gensys" class="unit" onclick="myFunction()" onmouseover="threeC2()" onmouseout="threeC()">
+      GSICU (3C)
+    </h3>
+
+    <input type="text" size="45" class="stats" placeholder=" stats & responders here" />
+    <br />
+    <input type="text" class="inputBox" placeholder="RT name here" list="adstaff" />
+    <datalist id="adstaff">
+      <option value="Adam"> </option>
+      <option value="Adamo"> </option>
+      <option value="Afzaa"></option>
+      <option value="Alanna"> </option>
+      <option value="Amy"> </option>
+      <option value="Amanda B."> </option>
+      <option value="Amanda D."> </option>
+      <option value="Anna W."> </option>
+      <option value="Anna R."> </option>
+      <option value="Andrea"> </option>
+      <option value="Andrew D."> </option>
+      <option value="Andrew M."> </option>
+      <option value="Andy"> </option>
+      <option value="Angela"> </option>
+      <option value="Annette"> </option>
+      <option value="April"> </option>
+      <option value="Ashley"> </option>
+      <option value="Ashlyn"> </option>
+      <option value="Ben"> </option>
+      <option value="Brandon"> </option>
+      <option value="Brenda"> </option>
+      <option value="Brianna"> </option>
+      <option value="Brigitte"> </option>
+      <option value="Cara"> </option>
+      <option value="Carla"> </option>
+      <option value="Carmen R."> </option>
+      <option value="Carol"> </option>
+      <option value="Carolina"> </option>
+      <option value="Carolyn"> </option>
+      <option value="Cassie L."> </option>
+      <option value="Cassie M."> </option>
+      <option value="Chandra"> </option>
+      <option value="Chelsea"> </option>
+      <option value="Cheryl"> </option>
+      <option value="Christine La."> </option>
+      <option value="Christina"> </option>
+      <option value="Christina J."> </option>
+      <option value="Colin"> </option>
+      <option value="Courtney"> </option>
+      <option value="Dan L."> </option>
+      <option value="Dana"> </option>
+      <option value="Danielle S."> </option>
+      <option value="Danielle W."> </option>
+      <option value="Darryl E."> </option>
+      <option value="Dawn"> </option>
+      <option value="Dayris"> </option>
+      <option value="Donna"> </option>
+      <option value="Edwin"> </option>
+      <option value="Ellen"> </option>
+      <option value="Elizabeth"> </option>
+      <option value="Emily B."> </option>
+      <option value="Emily H."> </option>
+      <option value="Emme"></option>
+      <option value="Eric"> </option>
+      <option value="Erin"> </option>
+      <option value="Fatima"> </option>
+      <option value="Felicia"> </option>
+      <option value="Fiona"> </option>
+      <option value="Gillian"> </option>
+      <option value="Geniene"> </option>
+      <option value="Graham"> </option>
+      <option value="Grishma"> </option>
+      <option value="Hailey"> </option>
+      <option value="Hanna"></option>
+      <option value="Hena"> </option>
+      <option value="J.R."> </option>
+      <option value="Jamey"> </option>
+      <option value="James"> </option>
+      <option value="Jeff W."> </option>
+      <option value="Jeremy"> </option>
+      <option value="Jenna P."> </option>
+      <option value="Jenna H."> </option>
+      <option value="Jennifer"> </option>
+      <option value="Jill"></option>
+      <option value="Jim"> </option>
+      <option value="Joel"> </option>
+      <option value="John"> </option>
+      <option value="Joshua T."> </option>
+      <option value="Joshua L."> </option>
+      <option value="Joslyn"> </option>
+      <option value="Julie"> </option>
+      <option value="Kahlia"> </option>
+      <option value="Kamilia"> </option>
+      <option value="Katherine"> </option>
+      <option value="Katie"> </option>
+      <option value="Kayla Wa."> </option>
+      <option value="Kayla Wo."> </option>
+      <option value="Kelly E."> </option>
+      <option value="Kelly T."> </option>
+      <option value="Kelsey B."></option>
+      <option value="Kelsey L."> </option>
+      <option value="Kelsey O."> </option>
+      <option value="Kelton"></option>
+      <option value="Kerri G."> </option>
+      <option value="Kevin"> </option>
+      <option value="Kim R."> </option>
+      <option value="Kirsten"> </option>
+      <option value="Kole"> </option>
+      <option value="Kristin"> </option>
+      <option value="Kristy"> </option>
+      <option value="Kylie"> </option>
+      <option value="Kyren"> </option>
+      <option value="Laila"> </option>
+      <option value="Lauren"> </option>
+      <option value="Leah"> </option>
+      <option value="Linda"> </option>
+      <option value="Lindsay Be."> </option>
+      <option value="Lindsay T."> </option>
+      <option value="Linley"> </option>
+      <option value="Lonnie"> </option>
+      <option value="Lori M."> </option>
+      <option value="Lynsi M."> </option>
+      <option value="Maria"> </option>
+      <option value="Marianella"> </option>
+      <option value="Marie"> </option>
+      <option value="Mariesa"> </option>
+      <option value="Marion"> </option>
+      <option value="Maryam"> </option>
+      <option value="Matt"> </option>
+      <option value="Megan"> </option>
+      <option value="Melissa"> </option>
+      <option value="Michelle D."> </option>
+      <option value="Michelle O."> </option>
+      <option value="Michelle T."> </option>
+      <option value="Mike"> </option>
+      <option value="Mikayla"></option>
+      <option value="Momina"> </option>
+      <option value="Murray"> </option>
+      <option value="Nancy"> </option>
+      <option value="Nathan"> </option>
+      <option value="Nawar"> </option>
+      <option value="Nick"> </option>
+      <option value="Nickie"> </option>
+      <option value="Nicole"> </option>
+      <option value="Nicole C."> </option>
+      <option value="Nicole L."> </option>
+      <option value="Nicole N."> </option>
+      <option value="Nikki Li."> </option>
+      <option value="Njomza"> </option>
+      <option value="Parin"> </option>
+      <option value="Parveen "> </option>
+      <option value="Paula"> </option>
+      <option value="Rachel"> </option>
+      <option value="Rachelle"> </option>
+      <option value="Raquel"> </option>
+      <option value="Rebecca C."> </option>
+      <option value="Rebecca F."> </option>
+      <option value="Rebecca S."> </option>
+      <option value="Renelle"> </option>
+      <option value="Richard"> </option>
+      <option value="Rick"> </option>
+      <option value="Roberta"> </option>
+      <option value="Robbyn D."> </option>
+      <option value="Robyn S."> </option>
+      <option value="Roy"></option>
+      <option value="Ryan"> </option>
+      <option value="Sabreena N."> </option>
+      <option value="Sabrina R."> </option>
+      <option value="Samantha H."> </option>
+      <option value="Samantha L."></option>
+      <option value="Sara E."> </option>
+      <option value="Sandy B."> </option>
+      <option value="Sandy S."> </option>
+      <option value="Scott"> </option>
+      <option value="Sean"> </option>
+      <option value="Shannon"> </option>
+      <option value="Shane"> </option>
+      <option value="Sharon"> </option>
+      <option value="Shauna W."> </option>
+      <option value="Shawna V."> </option>
+      <option value="Shruti"> </option>
+      <option value="Sijie"> </option>
+      <option value="Sophie L"> </option>
+      <option value="Sophie N."></option>
+      <option value="Stacey"> </option>
+      <option value="Stanley"> </option>
+      <option value="Steve"> </option>
+      <option value="Stephanie"> </option>
+      <option value="Sue"> </option>
+      <option value="Sydney"> </option>
+      <option value="Teresa S."> </option>
+      <option value="Terri J."> </option>
+      <option value="Tiffany"> </option>
+      <option value="Tina"> </option>
+      <option value="Tricia W."> </option>
+      <option value="Trisha R."> </option>
+      <option value="Vanessa"> </option>
+      <option value="Veronika"> </option>
+      <option value="Vonnie"> </option>
+      <option value="Yaunna"> </option>
+      <option value="Yesser"> </option>
+      <option value="Wendy"> </option>
+      <option value="Zeel"> </option>
+    </datalist>
+
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+
+    <h3 id="cardio" class="unit" onclick="otherFunction()" onmouseover="cvee2()" onmouseout="cvee()">
+      CVICU (3A8)
+    </h3>
+    <input type="text" size="45" class="stats" placeholder=" stats & responders here" />
+    <br />
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+
+    <h3 id="neuro" class="unit" onmouseover="neuro2()" onmouseout="neuro()">
+      Neuro ICU (4A4)
+    </h3>
+    <input type="text" size="45" class="stats" placeholder=" stats & responders here" />
+    <br />
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+
+    <h3 id="medicine" class="unit" onmouseover="med2()" onmouseout="med()">
+      Medicine (G)
+    </h3>
+    <input type="text" size="45" class="stats" placeholder=" stats & responders here" />
+    <br />
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+
+    <h3 id="floors" class="unit" onmouseover="surg2()" onmouseout="surg()">
+      Floors (F)
+    </h3>
+    <input type="text" size="45" class="stats" placeholder=" stats & responders here" />
+    <br />
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+
+    <h3 id="er" class="unit" onmouseover="ear2()" onmouseout="ear()">ER</h3>
+    <input type="text" size="40" class="stats" placeholder=" stats & responders here" />
+    <br />
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
+    <input list="adstaff" placeholder="RT name here" />
+    <datalist id="adstaff"> </datalist>
     <br />
     <br />
-    <form>
-      <h3
-        id="gensys"
-        class="unit"
-        onclick="myFunction()"
-        onmouseover="threeC2()"
-        onmouseout="threeC()"
-      >
-        GSICU (3C)
-      </h3>
+    <input type="text" size="90" class="stats" placeholder=" extra information here" />
+    <input type="text" size="90" class="stats" placeholder=" extra information here" />
 
-      <input
-        type="text"
-        size="45"
-        class="stats"
-        placeholder=" stats & responders here"
-      />
-      <br />
-      <input
-        type="text"
-        class="inputBox"
-        placeholder="RT name here"
-        list="adstaff"
-      />
-      <datalist id="adstaff">
-        <option value="Adam"> </option>
-        <option value="Adamo"> </option>
-        <option value="Alanna"> </option>
-        <option value="Amy"> </option>
-        <option value="Amanda B."> </option>
-        <option value="Amanda D."> </option>
-        <option value="Anna W."> </option>
-        <option value="Anna R."> </option>
-        <option value="Andrea"> </option>
-        <option value="Andrew D."> </option>
-        <option value="Andrew M."> </option>
-        <option value="Andy"> </option>
-        <option value="Angela"> </option>
-        <option value="Annette"> </option>
-        <option value="April"> </option>
-        <option value="Ashley"> </option>
-        <option value="Ashlyn"> </option>
-        <option value="Ben"> </option>
-        <option value="Brandon"> </option>
-        <option value="Brenda"> </option>
-        <option value="Brianna"> </option>
-        <option value="Brigitte"> </option>
-        <option value="Cara"> </option>
-        <option value="Carla"> </option>
-        <option value="Carmen R."> </option>
-        <option value="Carol"> </option>
-        <option value="Carolina"> </option>
-        <option value="Carolyn"> </option>
-        <option value="Cassie L."> </option>
-        <option value="Cassie M."> </option>
-        <option value="Chandra"> </option>
-        <option value="Chelsea"> </option>
-        <option value="Cheryl"> </option>
-        <option value="Christine La."> </option>
-        <option value="Christina"> </option>
-        <option value="Christina J."> </option>
-        <option value="Colin"> </option>
-        <option value="Courtney"> </option>
-        <option value="Dan L."> </option>
-        <option value="Dana"> </option>
-        <option value="Danielle S."> </option>
-        <option value="Danielle W."> </option>
-        <option value="Darryl E."> </option>
-        <option value="Dawn"> </option>
-        <option value="Dayris"> </option>
-        <option value="Donna"> </option>
-        <option value="Edwin"> </option>
-        <option value="Ellen"> </option>
-        <option value="Elizabeth"> </option>
-        <option value="Emily B."> </option>
-        <option value="Emily H."> </option>
-        <option value="Eric"> </option>
-        <option value="Erin"> </option>
-        <option value="Fatima"> </option>
-        <option value="Felicia"> </option>
-        <option value="Fiona"> </option>
-        <option value="Gillian"> </option>
-        <option value="Geniene"> </option>
-        <option value="Graham"> </option>
-        <option value="Grishma"> </option>
-        <option value="Hailey"> </option>
-        <option value="Hena"> </option>
-        <option value="J.R."> </option>
-        <option value="Jamey"> </option>
-        <option value="James"> </option>
-        <option value="Jeff W."> </option>
-        <option value="Jeremy"> </option>
-        <option value="Jenna P."> </option>
-        <option value="Jenna H."> </option>
-        <option value="Jennifer"> </option>
-        <option value="Jim"> </option>
-        <option value="Joel"> </option>
-        <option value="John"> </option>
-        <option value="Joshua T."> </option>
-        <option value="Joshua L."> </option>
-        <option value="Joslyn"> </option>
-        <option value="Julie"> </option>
-        <option value="Kahlia"> </option>
-        <option value="Kamilia"> </option>
-        <option value="Katherine"> </option>
-        <option value="Katie"> </option>
-        <option value="Kayla Wa."> </option>
-        <option value="Kayla Wo."> </option>
-        <option value="Kelly E."> </option>
-        <option value="Kelly T."> </option>
-        <option value="Kelsey L."> </option>
-        <option value="Kelsey O."> </option>
-        <option value="Kerri G."> </option>
-        <option value="Kevin"> </option>
-        <option value="Kim R."> </option>
-        <option value="Kirsten"> </option>
-        <option value="Kole"> </option>
-        <option value="Kristin"> </option>
-        <option value="Kristy"> </option>
-        <option value="Kylie"> </option>
-        <option value="Kyren"> </option>
-        <option value="Laila"> </option>
-        <option value="Lauren"> </option>
-        <option value="Leah"> </option>
-        <option value="Linda"> </option>
-        <option value="Lindsay Be."> </option>
-        <option value="Lindsay T."> </option>
-        <option value="Linley"> </option>
-        <option value="Lonnie"> </option>
-        <option value="Lori M."> </option>
-        <option value="Lynsi M."> </option>
-        <option value="Maria"> </option>
-        <option value="Marianella"> </option>
-        <option value="Marie"> </option>
-        <option value="Mariesa"> </option>
-        <option value="Marion"> </option>
-        <option value="Maryam"> </option>
-        <option value="Matt"> </option>
-        <option value="Megan"> </option>
-        <option value="Melissa"> </option>
-        <option value="Michelle D."> </option>
-        <option value="Michelle O."> </option>
-        <option value="Michelle T."> </option>
-        <option value="Mike"> </option>
-        <option value="Momina"> </option>
-        <option value="Murray"> </option>
-        <option value="Nancy"> </option>
-        <option value="Nathan"> </option>
-        <option value="Nawar"> </option>
-        <option value="Nick"> </option>
-        <option value="Nickie"> </option>
-        <option value="Nicole"> </option>
-        <option value="Nicole C."> </option>
-        <option value="Nicole L."> </option>
-        <option value="Nicole N."> </option>
-        <option value="Nikki Li."> </option>
-        <option value="Njomza"> </option>
-        <option value="Parin"> </option>
-        <option value="Parveen "> </option>
-        <option value="Paula"> </option>
-        <option value="Rachel"> </option>
-        <option value="Rachelle"> </option>
-        <option value="Raquel"> </option>
-        <option value="Rebecca C."> </option>
-        <option value="Rebecca F."> </option>
-        <option value="Rebecca S."> </option>
-        <option value="Renelle"> </option>
-        <option value="Richard"> </option>
-        <option value="Rick"> </option>
-        <option value="Roberta"> </option>
-        <option value="Robbyn D."> </option>
-        <option value="Robyn S."> </option>
-        <option value="Ryan"> </option>
-        <option value="Sabreena N."> </option>
-        <option value="Sabrina R."> </option>
-        <option value="Samantha"> </option>
-        <option value="Sara E."> </option>
-        <option value="Sandy B."> </option>
-        <option value="Sandy S."> </option>
-        <option value="Scott"> </option>
-        <option value="Sean"> </option>
-        <option value="Shannon"> </option>
-        <option value="Shane"> </option>
-        <option value="Sharon"> </option>
-        <option value="Shauna W."> </option>
-        <option value="Shawna V."> </option>
-        <option value="Shruti"> </option>
-        <option value="Sijie"> </option>
-        <option value="Sophie"> </option>
-        <option value="Stacey"> </option>
-        <option value="Stanley"> </option>
-        <option value="Steve"> </option>
-        <option value="Stephanie"> </option>
-        <option value="Sue"> </option>
-        <option value="Sydney"> </option>
-        <option value="Teresa S."> </option>
-        <option value="Terri J."> </option>
-        <option value="Tiffany"> </option>
-        <option value="Tina"> </option>
-        <option value="Tricia W."> </option>
-        <option value="Trisha R."> </option>
-        <option value="Vanessa"> </option>
-        <option value="Veronika"> </option>
-        <option value="Vonnie"> </option>
-        <option value="Yaunna"> </option>
-        <option value="Yesser"> </option>
-        <option value="Wendy"> </option>
-        <option value="Zeel"> </option>
-      </datalist>
+    <br />
+    <button id="printbtn" type="button" onclick="window.print();">
+      Print this page
+    </button>
+    <br />
+  </form>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script>
+    gsap.from(".unit", {
+      opacity: 0,
+      duration: 0.5,
+      ease: "Power2.easeInOut",
+      stagger: 0.2
+    });
+  </script>
+</body>
 
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-
-      <h3
-        id="cardio"
-        class="unit"
-        onclick="otherFunction()"
-        onmouseover="cvee2()"
-        onmouseout="cvee()"
-      >
-        CVICU (3A8)
-      </h3>
-      <input
-        type="text"
-        size="45"
-        class="stats"
-        placeholder=" stats & responders here"
-      />
-      <br />
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-
-      <h3 id="neuro" class="unit" onmouseover="neuro2()" onmouseout="neuro()">
-        Neuro ICU (4A4)
-      </h3>
-      <input
-        type="text"
-        size="45"
-        class="stats"
-        placeholder=" stats & responders here"
-      />
-      <br />
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-
-      <h3 id="medicine" class="unit" onmouseover="med2()" onmouseout="med()">
-        Medicine (G)
-      </h3>
-      <input
-        type="text"
-        size="45"
-        class="stats"
-        placeholder=" stats & responders here"
-      />
-      <br />
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-
-      <h3 id="floors" class="unit" onmouseover="surg2()" onmouseout="surg()">
-        Floors (F)
-      </h3>
-      <input
-        type="text"
-        size="45"
-        class="stats"
-        placeholder=" stats & responders here"
-      />
-      <br />
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-
-      <h3 id="er" class="unit" onmouseover="ear2()" onmouseout="ear()">ER</h3>
-      <input
-        type="text"
-        size="40"
-        class="stats"
-        placeholder=" stats & responders here"
-      />
-      <br />
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist>
-      <br />
-      <br />
-      <input
-        type="text"
-        size="90"
-        class="stats"
-        placeholder=" extra information here"
-      />
-      <input
-        type="text"
-        size="90"
-        class="stats"
-        placeholder=" extra information here"
-      />
-
-      <br />
-      <button id="printbtn" type="button" onclick="window.print();">
-        Print this page
-      </button>
-      <br />
-    </form>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-    <script>
-      gsap.from(".unit", {
-        opacity: 0,
-        duration: 0.5,
-        ease: "Power2.easeInOut",
-        stagger: 0.2
-      });
-    </script>
-  </body>
 </html>
