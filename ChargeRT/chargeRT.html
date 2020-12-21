@@ -30,6 +30,30 @@
       box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.6);
     }
 
+
+    #ccf {
+
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      align-self: center;
+      height: 20px;
+      margin: 3px;
+      margin-right: 15px;
+      margin-bottom: 9px;
+      padding-right: 5px;
+      padding-left: 5px;
+      border: outset;
+      border-color: #F6CFB9;
+      box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+
+    }
+
     .er:hover {
       -webkit-transform: scaleX(-1);
       transform: scaleX(-1);
@@ -603,8 +627,14 @@ function otherFunction() {
     <input list="adstaff" placeholder="RT name here" />
     <datalist id="adstaff"> </datalist>
 
-    <h4>CCF: <input list="adstaff" placeholder="RT name here" />
-      <datalist id="adstaff"> </datalist></h4>
+    <div class="container">
+      <div id="ccf">
+        <h4> CCF: </h4>
+      </div>
+      <input list="adstaff" placeholder="RT name here">
+      <datalist id="adstaff">
+      </datalist>
+    </div>
 
     <input type="text" size="90" class="stats" placeholder=" extra information here" />
     <input type="text" size="90" class="stats" placeholder=" extra information here" />
