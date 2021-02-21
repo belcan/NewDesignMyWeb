@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,75 +8,79 @@
     <link rel="stylesheet" href="ARDSnet.css">
     <title>ARDSnet</title>
 </head>
+
 <body>
     <header>
         <h1 id="title">ARDSnet</h1>
-    </header>    
-       <div class="container"> 
-            <div class="radio"> 
-                <ul>
-                 <li>
-                <input type="radio" id="radioMale" name="gender" value="male" checked>
-                <label label for="radioMale">Male</label> <br><br>
-                   </li>
+    </header>
+    <div class="container">
+        <div class="radio">
+            <ul>
                 <li>
-                <input type="radio" id="radioFemale" name="gender" value="female" >
-                <label label for="radioFemale">Female</label> <br>
-            </li>
-                </ul>
-            </div>
-            <div class="patient">
-                <p> Patient's height in cm</p>
-                <input type="number" id="inputHeight" min="120" max="250"/> <br>
-                <button id="calcButton" onclick="doIt()">Calculate</button>
-                <button id="printButton" onclick="window.print()">Print</button>
-            </div>
-            <div class="volumes">
-                <form>
-                    <div id="ventTidVol">Ventilator Tidal Volumes</div>
-                    <div>
-                        <p>4 ml/kg</p>
-                        <output type="number" id="fourMil">
-                        <p>___</p>
-                    </div>
-                    
-                    <div>
-                        <p>5 ml/kg</p>
-                        <output type="number" id="fiveMil">
-                        <p>___</p>
-                    </div>
-                    <div>
-                        <p>6 ml/kg</p>
-                        <output type="number" id="sixMil">
-                        <p>___</p>
-                    </div>
-                    <div>
-                        <p>7 ml/kg</p>
-                        <output type="number" id="sevenMil">
-                        <p>___</p>
-                    </div>
-                    <div>
-                        <p>8 ml/kg</p>
-                        <output type="number" id="eightMil">
-                        <p>___</p>
-                    </div>
-                </form>
-            </div>
-      </div>  
-            <footer>
-
-            </footer>  
-      <div class="images">
-           <div>
-                 <img src="pictures/ards.jpg" alt="ARDSnet protocol" height="442" width="642" title="Image source: ARDSnet.org">
-           </div>
-          <div>
-                 <img src="pictures/ards-2.jpg" alt="ARDSnet protocol" height="442" width="642" title="Image source: ARDSnet.org">
+                    <input type="radio" id="radioMale" name="gender" value="male" checked onclick="doItThree()">
+                    <label label for="radioMale">Male</label> <br><br>
+                </li>
+                <li>
+                    <input type="radio" id="radioFemale" name="gender" value="female" onclick="doItThree()">
+                    <label label for="radioFemale">Female</label> <br>
+                </li>
+            </ul>
         </div>
-      </div>
-      
-        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-        <script src="ARDSnet.js"></script>
-    
+        <div class="patient">
+            <p> Patient's height in cm</p>
+            <input type="number" id="inputHeight" min="120" max="250" /> <br>
+            <button id="calcButton" onclick="doIt()">Calculate</button>
+            <button id="printButton" onclick="window.print()">Print</button>
+        </div>
+        <div class="volumes">
+            <form>
+                <div id="ventTidVol">Ventilator Tidal Volumes</div>
+                <div>
+                    <p>4 ml/kg</p>
+                    <output type="number" id="fourMil">
+                        <p>___</p>
+                </div>
+
+                <div>
+                    <p>5 ml/kg</p>
+                    <output type="number" id="fiveMil">
+                        <p>___</p>
+                </div>
+                <div>
+                    <p>6 ml/kg</p>
+                    <output type="number" id="sixMil">
+                        <p>___</p>
+                </div>
+                <div>
+                    <p>7 ml/kg</p>
+                    <output type="number" id="sevenMil">
+                        <p>___</p>
+                </div>
+                <div>
+                    <p>8 ml/kg</p>
+                    <output type="number" id="eightMil">
+                        <p>___</p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <div class="images">
+        <div>
+            <img src="pictures/ards.jpg" alt="ARDSnet protocol" height="442" width="642"
+                title="Image source: ARDSnet.org">
+        </div>
+        <div>
+            <img src="pictures/ards-2.jpg" alt="ARDSnet protocol" height="442" width="642"
+                title="Image source: ARDSnet.org">
+        </div>
+    </div>
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="ARDSnet.js"></script>
+
 </body>
+
 </html>

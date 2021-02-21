@@ -58,6 +58,19 @@ function doIt() {
   }
 }
 
+
+function doItThree() {
+  if (document.querySelector("#fourMil").innerHTML !== ' '); {
+    document.querySelector("#fourMil").innerHTML = '___';
+    document.getElementById("fiveMil").innerHTML = '___';
+    document.getElementById("sixMil").innerHTML = '___';
+    document.getElementById("sevenMil").innerHTML = '___';
+    document.getElementById("eightMil").innerHTML = '___';
+    calcButton.style.visibility = 'visible';
+    printButton.style.visibility = 'hidden';
+  }
+}
+
 gsap.from('.volumes p, output', { opacity: 0, duration: 1.1, ease: 'Power2.easeInOut', stagger: 0.1 })
 
 gsap.from('#title', { opacity: 0, duration: 1.3, y: -40, ease: 'elastic.out(1.5, 0.3)' })
