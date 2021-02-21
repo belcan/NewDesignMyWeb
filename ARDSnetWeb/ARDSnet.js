@@ -8,7 +8,9 @@ function calculateM() {
   let c = 50 + 0.905 * (b - 152.4);
   if (a === '') {
     alert("Please Enter Paitent's Height")
-  } else {
+  }
+  else if (a < 120 || a > 240) { alert("Make Sure To Enter Correct Height in cm") }
+  else {
     document.querySelector("#fourMil").innerHTML = '  ' + (c * 4).toFixed(0) + '  ml';
     document.getElementById("fiveMil").innerHTML = '  ' + (c * 5).toFixed(0) + ' ml';
     document.getElementById("sixMil").innerHTML = '  ' + (c * 6).toFixed(0) + ' ml';
@@ -29,7 +31,9 @@ function calculateF() {
   let f = 45.5 + 0.905 * (e - 152.4);
   if (d === '') {
     alert("Please Enter Paitent's Height")
-  } else {
+  }
+  else if (d < 120 || d > 240) { alert("Make Sure To Enter Correct Height in cm") }
+  else {
     document.getElementById("fourMil").innerHTML = (f * 4).toFixed(0) + ' ml';
     document.getElementById("fiveMil").innerHTML = (f * 5).toFixed(0) + ' ml';
     document.getElementById("sixMil").innerHTML = (f * 6).toFixed(0) + ' ml';
