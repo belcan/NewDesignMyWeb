@@ -65,6 +65,10 @@
       font-family: Arial, sans-serif;
       font-weight: 200;
     }
+      
+      #ccf-rt{
+          width: min(7.5rem, 10rem);
+      }
 
     #clockbox {
       border: double;
@@ -85,7 +89,7 @@
       margin-left: 600px;
       margin-top: 10px;
       border-style: groove;
-      border-radius: 5%;
+      border-radius: 0.5rem;
       padding: 0.5em;
       position: relative;
       text-shadow: 1px 1px 6px #def3f3;
@@ -97,6 +101,7 @@
       transition-property: color;
       transition-duration: 0.5s;
       transition-timing-function: linear;
+      outline: none;
       /*  -webkit-transition: all 1.3s ease-in-out;
 	-moz-transition:    all 1.3s ease-in-out;
 	-o-transition:      all 1.3s ease-in-out;
@@ -114,7 +119,11 @@
 	-ms-transform:     rotate(360deg) scale(1.3); */
       box-shadow: 10px 4px 10px 0px rgba(0, 0, 0, 0.8);
     }
-
+      #printbtn:active{
+          box-shadow: 1px 1px 2px #def3f3;
+          background-color: #5e3c84;
+          
+      }
     #button-anime {
       position: absolute;
       display: inline;
@@ -648,7 +657,7 @@ function otherFunction() {
       <div id="ccf">
         <h4> CCF: </h4>
       </div>
-      <input list="adstaff" placeholder="RT name here">
+      <input list="adstaff" id="ccf-rt" placeholder="RT name here">
       <datalist id="adstaff">
       </datalist>
       <input type="text" size="90" class="stats" placeholder=" CCF assignment here" />
