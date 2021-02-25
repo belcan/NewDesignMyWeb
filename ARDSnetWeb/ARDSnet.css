@@ -167,6 +167,7 @@ footer {
     cursor: pointer;
     font-size: 16px;
     position: relative;
+    outline: none;
 
     box-shadow:
         0 2.8px 2.2px rgba(0, 0, 0, 0.045),
