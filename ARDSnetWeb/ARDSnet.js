@@ -17,6 +17,8 @@ function calculateM() {
     document.getElementById("sevenMil").innerHTML = '   ' + (c * 7).toFixed(0) + ' ml';
     document.getElementById("eightMil").innerHTML = '   ' + (c * 8).toFixed(0) + ' ml';
 
+    document.getElementById("inputHeight").disabled = true;
+
     calcButton.style.visibility = 'hidden';
     printButton.style.visibility = 'visible';
 
@@ -39,6 +41,8 @@ function calculateF() {
     document.getElementById("sixMil").innerHTML = (f * 6).toFixed(0) + ' ml';
     document.getElementById("sevenMil").innerHTML = (f * 7).toFixed(0) + ' ml';
     document.getElementById("eightMil").innerHTML = (f * 8).toFixed(0) + ' ml';
+
+    document.getElementById("inputHeight").disabled = true;
 
 
     calcButton.style.visibility = 'hidden';
@@ -66,6 +70,9 @@ function doItThree() {
     document.getElementById("sixMil").innerHTML = '___';
     document.getElementById("sevenMil").innerHTML = '___';
     document.getElementById("eightMil").innerHTML = '___';
+
+    document.getElementById("inputHeight").disabled = false;
+
     calcButton.style.visibility = 'visible';
     printButton.style.visibility = 'hidden';
   }
