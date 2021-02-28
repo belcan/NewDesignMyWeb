@@ -3,6 +3,12 @@
 
 <head>
   <style type="text/css">
+    :root {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
     input {
       border: none;
       padding: 1.5px;
@@ -15,6 +21,7 @@
 
     body {
       background-color: #f2eefe;
+      position: relative;
     }
 
     h3 {
@@ -22,8 +29,7 @@
       margin: 3px;
       font-size: 1.5em;
       margin-bottom: 9px;
-      /* margin-right: 200px;
-          cursor: pointer; */
+      position: relative;
       border: outset;
       border-color: #f6cfb9;
       text-align: center;
@@ -65,18 +71,19 @@
       font-family: Arial, sans-serif;
       font-weight: 200;
     }
-      
-      #ccf-rt{
-          width: min(7.5rem, 10rem);
-      }
+
+    #ccf-rt {
+      width: min(7.5rem, 10rem);
+    }
 
     #clockbox {
+      position: relative;
       border: double;
       border-radius: 25px;
-      padding: 3px;
+      padding: 3px 14px;
       font-size: 1.5em;
-      margin-left: 20px;
-      display: inline;
+      margin: 20px 20px;
+      display: inline-block;
       box-shadow: 10px 4px 10px 0px rgba(0, 0, 0, 0.4);
     }
 
@@ -119,11 +126,13 @@
 	-ms-transform:     rotate(360deg) scale(1.3); */
       box-shadow: 10px 4px 10px 0px rgba(0, 0, 0, 0.8);
     }
-      #printbtn:active{
-          box-shadow: 1px 1px 2px #def3f3;
-          background-color: #5e3c84;
-          
-      }
+
+    #printbtn:active {
+      box-shadow: 1px 1px 2px #def3f3;
+      background-color: #5e3c84;
+
+    }
+
     #button-anime {
       position: absolute;
       display: inline;
