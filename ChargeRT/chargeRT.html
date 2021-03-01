@@ -39,7 +39,7 @@
 
 
     #ccf {
-
+      font-weight: bold;
       display: flex;
       flex-wrap: nowrap;
       align-items: center;
@@ -89,7 +89,7 @@
     }
 
     #clockbox:hover {
-      background-color: #8ffec3;
+      background-color: #fbeaff;
       box-shadow: 10px 4px 10px 0px rgba(0, 0, 0, 0.8);
     }
 
@@ -344,6 +344,13 @@ function otherFunction() {
     }
     function ear2() {
       document.getElementById("er").innerHTML = "You have a good one!";
+    }
+
+    function ccf() {
+      document.querySelector('#ccf').innerHTML = "CCF, we appreciate your help!"
+      setTimeout(function ccf2() {
+        document.querySelector('#ccf').innerHTML = "CCF:"
+      }, 3000)
     }
   </script>
 </head>
@@ -664,7 +671,7 @@ function otherFunction() {
     <datalist id="adstaff"> </datalist>
 
     <div class="container">
-      <div id="ccf">
+      <div id="ccf" onclick="ccf()">
         <h4> CCF: </h4>
       </div>
       <input list="adstaff" id="ccf-rt" placeholder="RT name here">
