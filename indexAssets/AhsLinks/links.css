@@ -8,13 +8,19 @@ body {
 }
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 .container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
 }
+
 ul,
 a {
   list-style-type: none;
   display: flex;
   flex-flow: wrap;
   justify-content: space-around;
+    align-items: flex-start;
 }
 li {
   position: relative;
@@ -26,7 +32,7 @@ h1 {
   margin: 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 3.5em;
-  text-shadow: 2px 2px 2px #1f506d;
+    text-shadow: 2px 2px 2px #1f506d;
 }
 .pictures {
   display: flex;
@@ -34,12 +40,13 @@ h1 {
   flex-flow: wrap;
   transition: transform 0.8s;
   padding: 0.5em;
-  box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .pictures:hover {
   transform: scale(1.05);
   box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.6);
   padding: 0.5em;
+    
 }
 
 .pol-text,
