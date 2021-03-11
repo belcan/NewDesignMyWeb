@@ -368,8 +368,10 @@ button {
     cursor: auto;
 }
 
-img {
-    display: none;
+
+.footer{
+    position: absolute;
+    right: 60px;
 }
 
 @media only screen and (orientation: portrait) {
