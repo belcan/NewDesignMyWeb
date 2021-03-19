@@ -12,6 +12,7 @@ body {
     flex-flow: wrap;
     justify-content: space-around;
     align-items: flex-start;
+   
 }
 
 ul,
@@ -21,6 +22,7 @@ a {
   flex-flow: wrap;
   justify-content: space-around;
     align-items: flex-start;
+     gap: 16px;
 }
 li {
   position: relative;
