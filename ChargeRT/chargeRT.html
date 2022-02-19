@@ -36,8 +36,7 @@
       text-align: center;
       box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.6);
     }
-
-
+      
     #ccf {
       font-weight: bold;
       display: flex;
@@ -265,15 +264,16 @@ function otherFunction() {
       "November",
       "December"
     ];
-
+      
+       var shift;
     function GetClock() {
-      var d = new Date();
-      var nday = d.getDay(),
+      var d = new Date(); 
+      var nday = d.getDay(),            
         nmonth = d.getMonth(),
         ndate = d.getDate(),
         nhour = d.getHours(),
         nminute = d.getMinutes();
-      var shift;
+     
       switch (true) {
         case nhour > 7 && nhour <= 19:
           shift = "Nights";
@@ -281,6 +281,7 @@ function otherFunction() {
         case nhour > 19 || nhour <= 7:
           shift = "Days";
           break;
+              
       }
 
       document.getElementById("clockbox").innerHTML =
@@ -293,14 +294,47 @@ function otherFunction() {
         "" +
         ". " +
         shift;
+        
+       
+     //Bronch assignment display for nights and weekends   
+             function bronch() {
+      document.querySelector(".bronchS").style.display = "none";
+      }
+          if (shift == "Night"){
+        bronch()}  
+        
+                function bronch1() {
+      document.querySelector(".bronchS").style.display = "none";
+      }
+          if (tday[nday] == "Saturday"){
+        bronch1()} 
+        
+                  function bronch2() {
+      document.querySelector(".bronchS").style.display = "none";
+      }
+          if (tday[nday] == "Sunday"){
+        bronch2()} 
+       
     }
-
+      
+      
+    
     window.onload = function () {
       GetClock();
       setInterval(GetClock, 1000);
       //alert("Hey Charge, if this program opens in Internet Explorer it might not work properly. Close the program, right click the icon, choose 'open with...' and then pick either Firefox or Chrome. Enjoy :-)");
     };
 
+     // Hide/display CCF, ACF, ECMO
+      let hide = document.querySelector("#ccf5 datalis").datalist;
+      hide.trim();
+     
+      if (hide === ""){  
+          
+          alert("Please input a Value");
+         document.querySelector(".bronchS").style.display = "none";
+        }
+      
     function easterEgg2() {
       document.getElementById("clockbox").innerHTML = "Say Hi to Nick!";
     }
@@ -672,16 +706,28 @@ function otherFunction() {
     <input list="adstaff" placeholder="RT name here" />
     <datalist id="adstaff"> </datalist>
 
-    <div class="container">
+      
+     
+      
+      
+    <div class="container bronchS">
       <div id="ccf" onclick="ccf()">
         <h4> CCF: </h4>
       </div>
-      <input list="adstaff" id="ccf-rt" placeholder="RT name here">
-      <datalist id="adstaff">
+        <div id="ccf5">
+      <input list="adstaff" id="ccf-rt" placeholder="RT name here" >
+            
+     <!-- <datalist id="adstaff">
+          
       </datalist>
+        -->
+        </div>
       <input type="text" size="90" class="stats" placeholder=" CCF assignment here" />
     </div>
 
+      
+     
+      
     <input type="text" size="90" class="stats" placeholder=" extra information here" />
     <input type="text" size="90" class="stats" placeholder=" extra information here" />
 
