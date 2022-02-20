@@ -372,6 +372,10 @@ button {
 .footer{
     position: absolute;
     right: 60px;
+    opacity: 0.7;
+}
+.footer:hover{
+    opacity: 1;
 }
 
 @media only screen and (orientation: portrait) {
