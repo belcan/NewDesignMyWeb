@@ -369,13 +369,24 @@ button {
 }
 
 
-.footer{
+.footer {
     position: absolute;
     right: 60px;
     opacity: 0.7;
 }
-.footer:hover{
+
+.footer:hover {
     opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+
+    .tilesWrap li button {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 @media only screen and (orientation: portrait) {
