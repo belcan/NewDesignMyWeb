@@ -56,6 +56,23 @@
       box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.6);
     }
 
+    #clinicalLeads {
+      font-weight: bold;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      align-self: center;
+      height: 40px;
+      margin-left: 20px;
+      margin-right: 15px;
+      margin-bottom: 9px;
+      padding-right: 5px;
+      padding-left: px;
+      border: outset;
+      border-color: #F6CFB9;
+      box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.6);
+    }
+
     .container {
       display: flex;
       align-items: center;
@@ -775,10 +792,22 @@ function otherFunction() {
       </div>
       <input list="adstaff" id="ccf-rt" placeholder="RT name here"> <input list="adstaff" class="bronch" id="ccf-rt"
         placeholder="RT name here">
+
       <!--<datalist id="adstaff">
   </datalist> 
   -->
       <input type="text" size="90" class="stats ccf-asgn" placeholder=" Bronch assignment here" />
+    </div>
+
+    <!-- clinical leads -->
+    <div class="container bronchS">
+      <div id="clinicalLeads">
+        <h4> CLINICAL LEADS: </h4>
+      </div>
+      <input list="adstaff" id="ccf-rt" placeholder="RT name here"> <input list="adstaff" class="bronch" id="ccf-rt"
+        placeholder="RT name here"> <input list="adstaff" id="ccf-rt" placeholder="RT name here"> <input list="adstaff"
+        class="bronch" id="ccf-rt" placeholder="RT name here">
+      <input type="text" size="90" class="stats ccf-asgn" placeholder=" extra info for clinical leads" />
     </div>
 
     <input type="text" size="90" class="stats extra" placeholder=" extra information here" />
