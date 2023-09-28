@@ -341,6 +341,29 @@ function otherFunction() {
         bronch2()
       }
 
+      //Leads assignment display for nights and weekends 
+      function leads() {
+        document.querySelector(".leads").style.display = "none";
+      }
+      // let hour = new Date().getHours();
+      if (shift == "Nights") {
+        leads()
+      }
+
+      function leads1() {
+        document.querySelector(".leads").style.display = "none";
+      }
+      if (tday[nday] == "Saturday") {
+        leads1()
+      }
+
+      function leads2() {
+        document.querySelector(".leads").style.display = "none";
+      }
+      if (tday[nday] == "Sunday") {
+        leads2()
+      }
+
     }
 
 
@@ -800,13 +823,14 @@ function otherFunction() {
     </div>
 
     <!-- clinical leads -->
-    <div class="container bronchS">
+    <div class="container leads">
       <div id="clinicalLeads">
         <h4> CLINICAL LEADS: </h4>
       </div>
       <input list="adstaff" id="ccf-rt" placeholder="RT name here"> <input list="adstaff" class="bronch" id="ccf-rt"
         placeholder="RT name here"> <input list="adstaff" id="ccf-rt" placeholder="RT name here"> <input list="adstaff"
-        class="bronch" id="ccf-rt" placeholder="RT name here">
+        class="bronch" id="ccf-rt" placeholder="RT name here"><input list="adstaff" id="ccf-rt"
+        placeholder="RT name here">
       <input type="text" size="90" class="stats ccf-asgn" placeholder=" extra info for clinical leads" />
     </div>
 
