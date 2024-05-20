@@ -386,20 +386,20 @@ function otherFunction() {
       document.getElementById("gensys").innerHTML = "Hello Charge RT";
     }
     function cvee() {
-      document.getElementById("cardio").innerHTML = "CVICU (3A8)";
+      document.getElementById("cardio").innerHTML = "CVICU (3A8)/CCU (5A7)";
     }
     function cvee2() {
       document.getElementById("cardio").innerHTML =
         "Hope your shift is going well";
     }
-
+/*
     function covid() {
       document.getElementById("covid").innerHTML = "GSICU Surge/CCU (6A8/5A7)"
     }
     function covid2() {
       document.getElementById("covid").innerHTML = "Mixture of livers and hearts!LOL"
     }
-
+*/
     function neuro() {
       document.getElementById("neuro").innerHTML = "Neuro ICU (4A4)";
     }
@@ -436,6 +436,13 @@ function otherFunction() {
         document.querySelector('#ccf').innerHTML = "CCF:"
       }, 3000)
     }
+
+		function ecmoDisplay(){
+			if(document.querySelector('.js-ecmoInput').value === '' && document.querySelector('.js-ecmoInput2').value === '')
+			{
+			document.querySelector('.js-ecmo').style.display = 'none'
+			}
+		}
 
   </script>
 </head>
@@ -477,6 +484,7 @@ function otherFunction() {
       <option value="Carolina">
       <option value="Cassie L.">
       <option value="Cassie M.">
+      <option value="Chandra">  
       <option value="Chelsea">
       <option value="Cheryl">
       <option value="Christine La.">
@@ -487,7 +495,7 @@ function otherFunction() {
       <option value="Dana">
       <option value="Danielle W.">
       <option value="Denise">
-      <option value="Darryl E.">
+      <o ption value="Darryl E.">
       <option value="Dawson">
       <option value="Dayris">
       <option value="Ellen">
@@ -593,6 +601,7 @@ function otherFunction() {
       <option value="Samantha H.">
       <option value="Samantha L.">
       <option value="Sahra">
+      <option value="Sally">      
       <option value="Sara E.">
       <option value="Sara M.">
       <option value="Sarah V.">
@@ -649,7 +658,7 @@ function otherFunction() {
     <datalist id="adstaff"> </datalist>
 
     <h3 id="cardio" class="unit" onclick="otherFunction()" onmouseover="cvee2()" onmouseout="cvee()">
-      CVICU (3A8)
+      CVICU (3A8)/CCU (5A7)
     </h3>
     <input type="text" size="45" class="stats" placeholder=" stats & responders here" />
     <br />
@@ -696,7 +705,7 @@ function otherFunction() {
   <datalist id="adstaff">
   </datalist>
 -->
-    <h3 id="covid" class="unit" onmouseover="covid2()" onmouseout="covid()"> GSICU Surge/CCU (6A8/5A7)</h3>
+    <h3 id="covid" class="unit" onmouseover="covid2()" onmouseout="covid()"> Surge GSICU </h3>
     <input type="text" size="45" class="stats" placeholder=" stats & responders here">
     <br>
     <input list="adstaff" placeholder="RT name here">
@@ -798,11 +807,11 @@ function otherFunction() {
       <input type="text" size="90" class="stats ccf-asgn" placeholder=" ACF assignment here" />
     </div>
 
-    <div class="container">
+    <div class="container js-ecmo">
       <div id="ccf" onclick="ecmo()">
         <h4> ECMO: </h4>
       </div>
-      <input list="adstaff" id="ccf-rt" placeholder="RT name here"> <input list="adstaff" id="ccf-rt"
+      <input list="adstaff" id="ccf-rt" class="js-ecmoInput" placeholder="RT name here"> <input list="adstaff" id="ccf-rt" class="js-ecmoInput2"
         placeholder="RT name here">
 
 
@@ -838,7 +847,7 @@ function otherFunction() {
     <input type="text" size="90" class="stats extra" placeholder=" extra information here" />
 
     <br />
-    <button id="printbtn" type="button" onclick="window.print();">
+    <button id="printbtn" type="button" onclick='ecmoDisplay(); window.print();' >
       Print this page
     </button>
     <br />
